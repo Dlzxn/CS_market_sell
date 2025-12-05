@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "CSGO Market Enhancer",
+  "version": "1.0",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://market.csgo.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
