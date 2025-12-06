@@ -1,0 +1,157 @@
+/* --- ГЛАВНЫЕ СТИЛИ --- */
+body {
+    background: linear-gradient(135deg, #1f1f1f 0%, #0a0a0a 100%); /* Плавный темный градиент */
+    color: #e0e0e0;
+    width: 320px; /* Немного шире для лучшего вида */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden; /* Предотвращаем горизонтальную прокрутку */
+}
+
+/* --- КОНТЕЙНЕРЫ --- */
+#api-block, #app-main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Плавное появление */
+}
+
+/* Анимация плавного появления */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#app-main:not(.hidden) {
+    animation: fadeInSlide 0.5s forwards;
+}
+
+h2 {
+    color: #ffc107; /* Яркий заголовок */
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+h3 {
+    color: #ffc107;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+/* --- ПОЛЯ ВВОДА --- */
+input[type="text"], input[type="number"] {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    outline: none;
+    background: #2b2b2b;
+    color: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: auto; /* Автоматическая ширина */
+}
+
+/* Эффект при фокусировке */
+input:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+}
+
+/* --- КНОПКИ --- */
+button {
+    padding: 10px 15px;
+    border: none;
+    background: #ffc107; /* Основной цвет */
+    color: #1a1a1a;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+/* Эффект при наведении */
+button:hover {
+    background: #ffdb60;
+}
+
+/* Эффект при нажатии */
+button:active {
+    transform: scale(0.98);
+}
+
+/* --- ССЫЛКИ --- */
+a {
+    color: #ffc107;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* --- СКРЫТИЕ --- */
+.hidden {
+    display: none !important;
+}
+
+/* --- ДОПОЛНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ UI (Настройки) --- */
+#settings-container {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: #1a1a1a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.setting-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px dashed #2b2b2b;
+}
+
+.setting-row:last-child {
+    border-bottom: none;
+}
+
+.setting-row label {
+    font-size: 0.95em;
+    color: #c0c0c0;
+}
+
+.setting-row input[type="number"] {
+    width: 60px;
+    text-align: center;
+}
+
+.user-info {
+    margin-top: 15px;
+    font-size: 0.85em;
+    color: #888;
+    border-top: 1px solid #2b2b2b;
+    padding-top: 10px;
+    text-align: center;
+}
+
+#uid {
+    font-weight: bold;
+    color: #ffc107;
+}
