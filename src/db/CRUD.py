@@ -79,12 +79,15 @@ class UserBD:
 
         except KeyError:
             logger.error("KeyError | create_user function")
+            return False, 0
 
         except FileNotFoundError:
             logger.error("FileNotFound | create_user function")
+            return False, 0
 
         except Exception as e:
             logger.error(e)
+            return False, 0
 
         return False, 0
 
@@ -100,9 +103,11 @@ class UserBD:
 
         except KeyError:
             logger.error("KeyError | update_time function")
+            return False
 
         except Exception as e:
             logger.error(e)
+            return False
 
     def update_skin(self, data: SkinSettings) -> bool:
         try:
@@ -115,9 +120,34 @@ class UserBD:
                 return False
             flag = False
             for x in user["skins"]:
-                if x["skin_id"] == data.skin_id:
+                if x["id"] == data.skin_id:
+                    flag = True
                     x["min_price"] = data.min
                     x["auto_reprice"] = data.enabled
+                    self._dump()
+                    logger.info("User updated skins | update_skins function")
+                    return True
+            if flag == False:
+                skin = {
+                            "id": data.skin_id,
+                            "currently_price": None,
+                            "min_price": data.min,
+                            "auto_reprice": data.enabled,
+                        }
+                user["skins"].append(skin)
+                self._dump()
+                logger.info("User updated skins | update_skins function")
+                return True
+
+            return False
+
+        except KeyError:
+            logger.error("KeyError | update_skins function")
+            return False
+
+        except Exception as e:
+            logger.error(e)
+            return False
 
 
 

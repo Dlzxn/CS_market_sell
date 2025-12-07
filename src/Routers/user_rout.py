@@ -27,3 +27,7 @@ async def update_time(data: UpdateTimeData):
 
 @user_rout.post("/update_skin")
 async def update_skin(data: SkinSettings):
+    print(data)
+    status = user_database.update_skin(data)
+    print(status)
+    return {"status": status}

@@ -4,7 +4,20 @@
             "user_id": 1,
             "api_key": "ER23",
             "time": 40,
-            "skins": []
+            "skins": [
+                {
+                    "id": 8516308159,
+                    "currently_price": null,
+                    "min_price": 130.0,
+                    "auto_reprice": false
+                },
+                {
+                    "id": 8192908249,
+                    "currently_price": null,
+                    "min_price": 190.0,
+                    "auto_reprice": false
+                }
+            ]
         }
     ]
 }
