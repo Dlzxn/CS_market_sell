@@ -1,4 +1,4 @@
-const server_url = "http://127.0.0.1:8000/get_api";
+const server_url = "http://127.0.0.1:8000/users/get_api";
 
 // Получаем ссылки на оба блока
 const apiBlock = document.getElementById("api-block");
