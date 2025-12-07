@@ -15,6 +15,12 @@
                     "id": 8539679449,
                     "currently_price": null,
                     "min_price": 10.0,
+                    "auto_reprice": false
+                },
+                {
+                    "id": 8541208319,
+                    "currently_price": null,
+                    "min_price": 5.0,
                     "auto_reprice": true
                 }
             ]
