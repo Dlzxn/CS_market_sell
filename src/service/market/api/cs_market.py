@@ -1,6 +1,5 @@
 import aiohttp
 from typing import Any
-from src.config.config import *
 
 
 
@@ -113,10 +112,10 @@ class CSMarket:
                 else:
                     return {
                         'status': False,
-                        'message': res['error'],
+                        'message': res['error']
                         }
 
-    async def update_price_item(self, item_id: int, new_price_item: int | float, currency: str ='RUB') -> dict[str, str]:
+    async def update_price_item(self, item_id: int | str, new_price_item: int | float, currency: str ='RUB') -> dict[str, str]:
         """
             Summary: Установить новую цена на предмет
 
@@ -152,3 +151,40 @@ class CSMarket:
                         'status': False,
                         'message': 'Предмет с данным ID не найден'
                         }
+
+    async def list_best_prices(self) -> dict[str, Any]:
+            """
+                Summary: Получить список лучший цен
+
+                Parameters:
+                
+                Return:
+                    Dict[str, Any]
+
+                    {
+                        "success": true,
+                        "time": 1765120214,
+                        "currency": "RUB",
+                        "items": [
+                            {
+                                "market_hash_name": "'Blueberries' Buckshot | NSWC SEAL",
+                                "volume": "54",
+                                "price": "1436.87"
+                            },
+                            {
+                                "market_hash_name": "'Medium Rare' Crasswater | Guerrilla Warfare",
+                                "volume": "52",
+                                "price": "3212.67"
+                            },
+                        ...
+                    }
+            """
+
+            async with aiohttp.ClientSession() as session:
+                async with session.get(
+                    url='https://market.csgo.com/api/v2/prices/RUB.json'
+                ) as response:
+
+                    data = await response.json()
+
+                    return data
