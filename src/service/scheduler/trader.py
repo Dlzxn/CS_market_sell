@@ -14,33 +14,39 @@ async def check_user_orders(user_id: int | str) -> None:
     else:
         market = CSMarket(user["api_key"])
         list = await market.get_items_for_sale()
-        print(list["items"], len(list["items"]))
 
         for x in user["skins"]:
-            print("Ищем скин в инвенторе...")
             for y in list["items"]:
                 if str(y["item_id"]) == str(x["id"]):
-                    print("Нашли")
+                    hash_name = y["market_hash_name"]
                     if str(y["position"]) == "1":
-                        print("Позиция итак первая")
+                        logger.info("Позиция предмета занимает 1 место")
                         break
                     else:
-                        info = await market.get_inventory_steam()
+                        info = await market.list_best_prices()
                         lots = info["items"]
                         price = y["price"]
+                        flag = False
                         print(f"Длина лотов: {len(lots)}")
                         for lot in lots:
-                            print(str(lot["classid"]), str(x["id"]))
-                            if str(lot["id"]) == str(x["id"]) or str(lot["classid"]) == str(x["id"]):
-                                print(f"Нашли цену в {lot["market_price"] - 0.01}")
-                                price = lot["market_price"] - 0.01
-                        print(f"Новая цена стала: {price}")
+                            if str(lot["market_hash_name"]) == hash_name:
+                                price = float(lot["price"])*100 - 1
+                                logger.info(f"Нашли цену в {price}")
+                                flag = True
+                                break
                         if price < x["min_price"]:
+                            price = x["min_price"]
+                            flag = True
+                        print(f"Айди:{y["item_id"]}")
+                        if flag and price != y["price"]:
+                            status = await market.update_price_item(item_id=y["item_id"], new_price_item=price)
+                            if status["status"]:
+                                logger.info(f"Цена на предмет {hash_name} изменена на {price}")
+                            else:
+                                logger.error(status["message"])
                             break
-                        status = await market.update_price_item(item_id=x["id"], new_price_item=price)
-                        if status:
-                            logger.info(f"Цена на предмет с айди {x["id"]} изменена")
                         else:
-                            logger.error(status["message"])
-                        break
+                            logger.info(f"Цена на предмет {hash_name} не изменена")
+                            break
+
     print(f"Выполнено за : {time.time() - time_start}")

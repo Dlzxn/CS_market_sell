@@ -138,19 +138,24 @@ class CSMarket:
             async with session.post(
                 url=f'https://market.csgo.com/api/v2/set-price?key={self._api_key}&item_id={item_id}&price={new_price_item}&cur={currency}'
                 ) as response:
+                if response.status == 200:
+                    res = await response.json()
 
-                res = await response.json()
-
-                if res['success']:
-                    return {
-                        'status': True,
-                        'message': 'Цена изменена'
-                    }
+                    if res['success']:
+                        return {
+                            'status': True,
+                            'message': 'Цена изменена'
+                        }
+                    else:
+                        return {
+                            'status': False,
+                            'message': 'Предмет с данным ID не найден'
+                            }
                 else:
                     return {
-                        'status': False,
-                        'message': 'Предмет с данным ID не найден'
-                        }
+                            'status': False,
+                            'message': 'Сервер не ответил на соединение'
+                            }
 
     async def list_best_prices(self) -> dict[str, Any]:
             """
