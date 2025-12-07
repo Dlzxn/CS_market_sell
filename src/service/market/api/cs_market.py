@@ -39,9 +39,9 @@ class CSMarket:
                 ) as response:
 
                 if response.status == 200:
-                    
-                    steam_invetory = await response.json()
-                    return steam_invetory
+
+                    inventory_steam = await response.json()
+                    return inventory_steam
 
                 else:
                     return {
