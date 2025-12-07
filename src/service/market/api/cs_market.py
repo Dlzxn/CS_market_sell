@@ -13,9 +13,30 @@ class CSMarket:
 
     async def get_inventory_steam(self, lang: str = 'ru') -> dict[str, Any]:
         """
-        Получить весь инвентарь Steam~ аккаунта
-        * Получаем только те предметы, которые можно выставить на продажу
+            Summary: Получить весь инвентарь Steam аккаунта
+                    * Получаем только те предметы, которые можно выставить на продажу
+
+            Parameters:
+                * lang: str - язык. По умолчанию значение ru
+            
+            Return:
+                Dict[str, Any]
+
+                {
+                    "success": true,
+                    "items": [
+                        {
+                            "id": "14933635912",
+                            "classid": "310776767",
+                            "instanceid": "0",
+                            "market_hash_name": "SCAR-20 | Carbon Fiber (Factory New)",
+                            "market_price": 10.34,
+                            "tradable": 1
+                        }
+                    ]
+                }
         """
+
         async with aiohttp.ClientSession() as session:
             async with session.post(
                 url=f'https://market.csgo.com/api/v2/my-inventory?key={self._api_key}&lang={lang}'
@@ -25,8 +46,36 @@ class CSMarket:
 
     async def get_items_for_sale(self) -> dict[str, Any]:
         """
-        Получить список предметов, выстравленные на продажу
+            Summary: Получить список предметов, выстравленных на продажу
+             
+            Parameters:
+
+            Return:
+                Dict[str, Any]
+
+                {
+                    "success": true,
+                    "items": [
+                        {
+                            "item_id": "286316844",
+                            "assetid": "15092687536",
+                            "classid": "637317999",
+                            "instanceid": "630912635",
+                            "real_instance": "1629337655",
+                            "market_hash_name": "Horns of Monstrous Reprisal",
+                            "position": 0,
+                            "price": 4,
+                            "currency": "RUB",
+                            "status": "1",
+                            "live_time": 920,
+                            "left": null,
+                            "botid": "0",
+                            "settlement": 0,
+                        }
+                    ]
+                }
         """
+
         async with aiohttp.ClientSession() as session:
             async with session.post(
                 url=f'https://market.csgo.com/api/v2/items?key={self._api_key}'
@@ -36,9 +85,22 @@ class CSMarket:
 
     async def put_item_up_sale(self, item_id: int, price_item: int | float, currency: str ='RUB') -> dict[str, str]:
         """
-        Выставить предмет на продажу
-        item_id - id предмета из инвенторя Steam
+            Summary: Выставить предмет на продажу
+
+            Parameters:
+                item_id: int - ID предмета из Steam
+                price_item: int | float - цена прдемета
+                * currency: str - валюта. По умолчанию значение RUB
+
+            Return:
+                Dict[str, stt | bool]
+
+                {
+                    'status': bool,
+                    'message': str
+                }
         """
+
         async with aiohttp.ClientSession() as session:
             async with session.post(
                 url=f'https://market.csgo.com/api/v2/add-to-sale?key={self._api_key}&id={item_id}&price={price_item}&cur={currency}'
@@ -47,14 +109,35 @@ class CSMarket:
                 res = await response.json()
 
                 if res['success']:
-                    return {'message': f'Предмет выставлен на продажу'}
+                    return {
+                        'status': True,
+                        'message': f'Предмет выставлен на продажу'
+                        }
                 else:
-                    return {'message': res['error']}
+                    return {
+                        'status': False,
+                        'message': res['error']
+                        }
 
     async def update_price_item(self, item_id: int, new_price_item: int | float, currency: str ='RUB') -> dict[str, str]:
         """
-        Установить новую цена на предмет
+            Summary: Установить новую цена на предмет
+
+            Parameters:
+
+                item_id: int - ID предмета
+                new_price_item: int | float - новая цена на предмет
+                *currency: str - валюта. значение по умолчанию RUB
+
+            Return:
+                Dict[str, str | bool]
+
+                {
+                    'status': bool,
+                    'message': str
+                }
         """
+
         async with aiohttp.ClientSession() as session:
             async with session.post(
                 url=f'https://market.csgo.com/api/v2/set-price?key={self._api_key}&item_id={item_id}&price={new_price_item}&cur={currency}'
@@ -63,6 +146,12 @@ class CSMarket:
                 res = await response.json()
 
                 if res['success']:
-                    return {'message': 'Цена изменена'}
+                    return {
+                        'status': True,
+                        'message': 'Цена изменена'
+                    }
                 else:
-                    return {'message': 'Предмет с данным ID не найден'}
+                    return {
+                        'status': False,
+                        'message': 'Предмет с данным ID не найден'
+                        }
