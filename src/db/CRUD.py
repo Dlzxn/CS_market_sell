@@ -148,8 +148,17 @@ class UserBD:
         except Exception as e:
             logger.error(e)
             return False
+    def get_info_by_id(self, id: int) -> dict | None:
+        for x in self.base["users"]:
+            if x["user_id"] == id:
+                return x
+        return None
 
-
+    def get_all_id(self) -> list:
+        sp = []
+        for x in self.base["users"]:
+            sp.append((x["user_id"], x["time"]))
+        return sp
 
 
 

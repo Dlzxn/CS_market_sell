@@ -2,19 +2,31 @@
     "users": [
         {
             "user_id": 1,
-            "api_key": "ER23",
-            "time": 40,
+            "api_key": "AhA1ai90swp021wMaeJSnkN4kifY9yT",
+            "time": 10,
             "skins": [
                 {
                     "id": 8516308159,
                     "currently_price": null,
-                    "min_price": 130.0,
+                    "min_price": 145.0,
                     "auto_reprice": false
                 },
                 {
                     "id": 8192908249,
                     "currently_price": null,
                     "min_price": 190.0,
+                    "auto_reprice": false
+                },
+                {
+                    "id": 8539078729,
+                    "currently_price": null,
+                    "min_price": 2.0,
+                    "auto_reprice": true
+                },
+                {
+                    "id": 8539283949,
+                    "currently_price": null,
+                    "min_price": 3.0,
                     "auto_reprice": false
                 }
             ]

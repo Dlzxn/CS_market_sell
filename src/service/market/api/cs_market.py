@@ -3,13 +3,10 @@ from typing import Any
 from src.config.config import *
 
 
-config = Config()
-
 
 class CSMarket:
-    def __init__(self, api_key: str, id: int | str) -> None:
+    def __init__(self, api_key: str) -> None:
         self._api_key = api_key
-        self.id = id
 
     async def get_inventory_steam(self, lang: str = 'ru') -> dict[str, Any]:
         """
@@ -116,7 +113,7 @@ class CSMarket:
                 else:
                     return {
                         'status': False,
-                        'message': res['error']
+                        'message': res['error'],
                         }
 
     async def update_price_item(self, item_id: int, new_price_item: int | float, currency: str ='RUB') -> dict[str, str]:
