@@ -37,8 +37,17 @@ class CSMarket:
             async with session.post(
                 url=f'https://market.csgo.com/api/v2/my-inventory?key={self._api_key}&lang={lang}'
                 ) as response:
-                steam_invetory = await response.json()
-                return steam_invetory
+
+                if response.status == 200:
+                    
+                    steam_invetory = await response.json()
+                    return steam_invetory
+
+                else:
+                    return {
+                            'status': False,
+                            'message': 'Сервер не ответил на соединение'
+                            }
 
     async def get_items_for_sale(self) -> dict[str, Any]:
         """
@@ -76,8 +85,17 @@ class CSMarket:
             async with session.post(
                 url=f'https://market.csgo.com/api/v2/items?key={self._api_key}'
                 ) as response:
-                items = await response.json()
-                return items
+
+                if response.status == 200:
+
+                    items = await response.json()
+                    return items
+
+                else:
+                    return {
+                            'status': False,
+                            'message': 'Сервер не ответил на соединение'
+                            }
 
     async def put_item_up_sale(self, item_id: int, price_item: int | float, currency: str ='RUB') -> dict[str, str]:
         """
@@ -102,18 +120,24 @@ class CSMarket:
                 url=f'https://market.csgo.com/api/v2/add-to-sale?key={self._api_key}&id={item_id}&price={price_item}&cur={currency}'
                 ) as response:
             
-                res = await response.json()
+                if response.status == 200:
+                    res = await response.json()
 
-                if res['success']:
-                    return {
-                        'status': True,
-                        'message': f'Предмет выставлен на продажу'
-                        }
+                    if res['success']:
+                        return {
+                            'status': True,
+                            'message': f'Предмет выставлен на продажу'
+                            }
+                    else:
+                        return {
+                            'status': False,
+                            'message': res['error']
+                            }
                 else:
                     return {
-                        'status': False,
-                        'message': res['error']
-                        }
+                            'status': False,
+                            'message': 'Сервер не ответил на соединение'
+                            }
 
     async def update_price_item(self, item_id: int | str, new_price_item: int | float, currency: str ='RUB') -> dict[str, str]:
         """
@@ -138,6 +162,7 @@ class CSMarket:
             async with session.post(
                 url=f'https://market.csgo.com/api/v2/set-price?key={self._api_key}&item_id={item_id}&price={new_price_item}&cur={currency}'
                 ) as response:
+
                 if response.status == 200:
                     res = await response.json()
 
@@ -189,7 +214,15 @@ class CSMarket:
                 async with session.get(
                     url='https://market.csgo.com/api/v2/prices/RUB.json'
                 ) as response:
+                    
+                    if response.status == 200:
 
-                    data = await response.json()
+                        data = await response.json()
 
-                    return data
+                        return data
+                    
+                    else:
+                        return {
+                                'status': False,
+                                'message': 'Сервер не ответил на соединение'
+                                }
