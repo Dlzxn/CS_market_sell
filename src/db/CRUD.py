@@ -1,6 +1,6 @@
 import json
 from src.service.logger_cfg.log import logger
-from src.model.DataModel import DataModel, UpdateTimeData
+from src.model.DataModel import DataModel, UpdateTimeData, SkinSettings
 from typing import Any
 
 
@@ -103,6 +103,21 @@ class UserBD:
 
         except Exception as e:
             logger.error(e)
+
+    def update_skin(self, data: SkinSettings) -> bool:
+        try:
+            flag = False
+            for x in self.base["users"]:
+                if x["user_id"] == data.user_id:
+                    user = x
+                    flag = True
+            if not flag:
+                return False
+            flag = False
+            for x in user["skins"]:
+                if x["skin_id"] == data.skin_id:
+                    x["min_price"] = data.min
+                    x["auto_reprice"] = data.enabled
 
 
 

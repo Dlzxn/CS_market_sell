@@ -14,14 +14,18 @@ function initEnhancer() {
         btn.innerText = "AutoPrice";
         btn.className = "auto-reprice-btn";
         btn.style.cssText = `
-            background: #ffcc00;
+            background: linear-gradient(135deg, #ffcc00, #ff6600);
             border: none;
-            padding: 5px 10px;
+            padding: 6px 12px;
             margin-left: 6px;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
             font-weight: bold;
+            color: #000;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         `;
+        btn.onmouseover = () => btn.style.transform = "scale(1.05)";
+        btn.onmouseleave = () => btn.style.transform = "scale(1)";
 
         actions.appendChild(btn);
 
@@ -35,65 +39,104 @@ function initEnhancer() {
             transform: translate(-50%, -50%);
             background: #1f1f2e;
             border: 2px solid #ffcc00;
-            padding: 18px;
-            border-radius: 10px;
-            width: 300px;
+            padding: 20px;
+            border-radius: 12px;
+            width: 320px;
             z-index: 999999;
             display: none;
             color: white;
             font-size: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.6);
+            animation: fadeIn 0.3s ease;
         `;
 
         modal.innerHTML = `
-            <h2 style="margin:0 0 10px">AutoPrice Settings</h2>
+            <h2 style="margin:0 0 12px; text-align:center;">AutoPrice Settings</h2>
 
-            <label style="display:flex;align-items:center;">
+            <label style="display:flex;align-items:center;margin-bottom:10px;">
                 <input type="checkbox" id="enable_${i}" style="margin-right:8px;">
                 Включить авторепрайс
             </label>
 
-            <p style="margin:10px 0 4px;">Минимальная цена (стоп-лосс):</p>
+            <p style="margin:0 0 4px;">Минимальная цена (стоп-лосс):</p>
             <input id="min_${i}" type="number" step="0.01" min="0" style="
-                width:100%;padding:5px;border-radius:6px;border:none;
-            ">
-
-            <p style="margin:10px 0 4px;">Интервал проверки (сек):</p>
-            <input id="interval_${i}" type="number" value="30" min="5" style="
-                width:100%;padding:5px;border-radius:6px;border:none;
+                width:100%;padding:6px;border-radius:6px;border:none;margin-bottom:12px;
             ">
 
             <button id="save_${i}" style="
-                margin-top:10px;width:100%;padding:7px;
-                background:#ffcc00;color:black;font-weight:bold;
+                width:100%;padding:8px;
+                background: linear-gradient(135deg, #00ffcc, #0066ff);
+                color:black;font-weight:bold;
                 border-radius:6px;border:none;cursor:pointer;
+                margin-bottom:6px;
+                transition: transform 0.2s ease;
             ">Сохранить</button>
 
             <button id="close_${i}" style="
-                margin-top:6px;width:100%;padding:6px;
+                width:100%;padding:8px;
                 background:#333;color:white;border:none;
                 border-radius:6px;cursor:pointer;
+                transition: transform 0.2s ease;
             ">Закрыть</button>
         `;
 
         document.body.appendChild(modal);
 
-        // Открытие
+        // ===== ОТКРЫТИЕ МОДАЛКИ =====
         btn.addEventListener("click", () => modal.style.display = "block");
 
-        // Закрытие
+        // ===== ЗАКРЫТИЕ МОДАЛКИ =====
         modal.querySelector(`#close_${i}`).onclick = () => {
             modal.style.display = "none";
         };
 
-        // Логика сохранения
-        modal.querySelector(`#save_${i}`).onclick = () => {
+        // Закрытие при клике вне модалки
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        // ===== СОХРАНЕНИЕ НА СЕРВЕР =====
+        async function getUserId() {
+            return new Promise(resolve => {
+                chrome.storage.local.get(['user_id'], (result) => resolve(result.user_id));
+            });
+        }
+
+        modal.querySelector(`#save_${i}`).onclick = async () => {
             const enabled = modal.querySelector(`#enable_${i}`).checked;
-            const min = modal.querySelector(`#min_${i}`).value;
-            const interval = modal.querySelector(`#interval_${i}`).value;
+            const min = parseFloat(modal.querySelector(`#min_${i}`).value);
+            const skin_id = parseInt(item.dataset.id);
 
-            console.log(`📌 ITEM #${i}`, { enabled, min, interval });
+            const user_id = await getUserId();
+            if (!user_id) {
+                alert("User ID не найден!");
+                return;
+            }
 
-            modal.style.display = "none"; // можно убрать если хочешь оставлять открытым
+            try {
+                const response = await fetch('http://localhost:8000/save_settings', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        user_id,
+                        skin_id,
+                        enabled,
+                        min
+                    })
+                });
+                const data = await response.json();
+                if (data.status) {
+                    alert("Настройки успешно сохранены!");
+                } else {
+                    alert("Ошибка при сохранении на сервере");
+                }
+            } catch (err) {
+                alert("Ошибка сети: " + err);
+            }
+
+            modal.style.display = "none";
         };
     });
 }

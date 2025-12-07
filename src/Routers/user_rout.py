@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
 from src.db.CRUD import user_database
-from src.model.DataModel import DataModel, UpdateTimeData
+from src.model.DataModel import DataModel, UpdateTimeData, SkinSettings
 
 user_rout = APIRouter(prefix="/users")
 
@@ -24,3 +24,6 @@ async def get_api(data: DataModel):
 async def update_time(data: UpdateTimeData):
     status = user_database.update_time(data)
     return {"status": status}
+
+@user_rout.post("/update_skin")
+async def update_skin(data: SkinSettings):
