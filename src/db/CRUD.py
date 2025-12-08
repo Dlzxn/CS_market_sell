@@ -58,10 +58,8 @@ class UserBD:
                 if x["api_key"] == user.api_key:
                     user = x
                     return True, user["user_id"]
-            if len(self.base["users"]) == 0:
-                count = 0
-            else:
-                count = len(self.base["users"])
+
+            count = len(self.base["users"])
 
             user = {
                 "user_id": count,
