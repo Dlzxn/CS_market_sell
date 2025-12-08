@@ -1,8 +1,10 @@
-const server_url = "http://185.197.75.72:8000/users/get_api";
+const server_url = "http://127.0.0.1:8000/users/get_api";
 
 // Получаем ссылки на оба блока
 const apiBlock = document.getElementById("api-block");
 const appMainBlock = document.getElementById("app-main");
+// 💡 ПОЛУЧАЕМ ССЫЛКУ НА КНОПКУ ПОВТОРНОГО ВХОДА (ID, который должен быть в popup.html)
+const reloginBtn = document.getElementById("relogin-btn");
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -12,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     chrome.storage.local.get(["api_key", "user_id"], data => {
 
-        if (data.api_key) {
+        if (!data.api_key) {
             // Если API нет → показываем ТОЛЬКО ввод
             showApiInput();
         } else {
@@ -23,12 +25,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+    // 💡 ШАГ 2: ОБРАБОТЧИК КНОПКИ ПОВТОРНОГО ВХОДА
+    if (reloginBtn) {
+        reloginBtn.onclick = () => {
+            if (confirm("Вы уверены, что хотите сменить API-KEY? Для применения сброса расширение будет перезагружено.")) {
+                // Удаляем сохраненные данные, чтобы сбросить авторизацию
+                chrome.storage.local.remove(["api_key", "user_id"], () => {
+                    // Перезагружаем расширение, чтобы выполнить логику проверки авторизации заново
+                    location.reload();
+                });
+            }
+        };
+    }
 });
 
 function showApiInput() {
     // Эта функция вызывается ТОЛЬКО когда api_key нет.
     // Она удаляет класс .hidden, делая блок #api-block видимым.
     apiBlock.classList.remove("hidden");
+
+    // Очищаем поле ввода на случай, если пользователь вернулся после ошибки
+    document.getElementById("api-input").value = '';
 
     document.getElementById("api-save-btn").onclick = () => {
         // Логика сохранения API ключа остается без изменений

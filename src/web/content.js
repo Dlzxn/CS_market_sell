@@ -109,7 +109,7 @@ function initEnhancer() {
             }
 
             try {
-                const response = await fetch('http://185.197.75.72:8000/users/update_skin', {
+                const response = await fetch('http://127.0.0.1:8000/users/update_skin', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ user_id, skin_id, enabled, min })

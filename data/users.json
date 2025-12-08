@@ -2,7 +2,26 @@
     "users": [
         {
             "user_id": 0,
+            "api_key": "swp021kifY9yT",
+            "time": 30,
+            "skins": []
+        },
+        {
+            "user_id": 1,
             "api_key": "AhA1ai90swp021wMaeJSnkN4kifY9yT",
+            "time": 45,
+            "skins": [
+                {
+                    "id": 8539679449,
+                    "currently_price": null,
+                    "min_price": 100.0,
+                    "auto_reprice": false
+                }
+            ]
+        },
+        {
+            "user_id": 2,
+            "api_key": "fafafa",
             "time": 30,
             "skins": []
         }
