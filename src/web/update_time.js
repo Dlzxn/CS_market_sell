@@ -1,5 +1,5 @@
 // Переменные, используемые в settings.js
-const UPDATE_URL = "http://127.0.0.1:8000/users/updates_time";
+const UPDATE_URL = "http://185.197.75.72:8000/users/updates_time";
 
 // Добавляем слушатель событий после загрузки DOM
 document.addEventListener("DOMContentLoaded", () => {

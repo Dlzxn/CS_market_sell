@@ -1,4 +1,4 @@
-const server_url = "http://127.0.0.1:8000/users/get_api";
+const server_url = "http://185.197.75.72:8000/users/get_api";
 
 // Получаем ссылки на оба блока
 const apiBlock = document.getElementById("api-block");
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     chrome.storage.local.get(["api_key", "user_id"], data => {
 
-        if (!data.api_key) {
+        if (data.api_key) {
             // Если API нет → показываем ТОЛЬКО ввод
             showApiInput();
         } else {
