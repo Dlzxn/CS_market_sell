@@ -6,8 +6,28 @@ from typing import Any
 class CSMarket:
     def __init__(self, api_key: str) -> None:
         self._api_key = api_key
+        self._min_delay = 0.2
+        self._last_request_time: float = 0
+        self._lock = asyncio.Lock()
+
+    async def _limit_rate(self):
+        """
+            Summary: Ограничивает частоту запросов до
+
+            Parameters:
+
+            Return: None 
+        """
+        async with self._lock:
+            elapsed = time.time() - self._last_request_time
+            if elapsed < self._min_delay:
+                await asyncio.sleep(self._min_delay - elapsed)
+            self._last_request_time = time.time()
 
     async def _make_request(self, url: str, method: str):
+        
+        await self._limit_rate()
+
         async with aiohttp.ClientSession() as session:
             async with session.request(url=url, method=method) as response:
                 
