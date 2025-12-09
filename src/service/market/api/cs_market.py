@@ -214,15 +214,3 @@ class CSMarket:
                 return response
             
             return response
-
-
-import asyncio
-
-async def main():
-    m = CSMarket()
-
-    d = await m.get_items_for_sale()
-
-    print(d)
-
-asyncio.run(main())
