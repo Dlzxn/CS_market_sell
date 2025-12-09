@@ -1,7 +1,8 @@
-import json
+import json, os
 from src.service.logger_cfg.log import logger
 from src.model.DataModel import DataModel, UpdateTimeData, SkinSettings
 from typing import Any
+from filelock import FileLock
 
 
 class UserBD:
@@ -40,19 +41,27 @@ class UserBD:
     }
     """
     def __init__(self) -> None:
-        self.base = self.__load()
+        self.base = None
+        self.__load()
 
-    @staticmethod
-    def __load() -> tuple:
-        with open("data/users.json", "r") as f:
-            return json.load(f)
+    def __load(self) -> bool:
+        lock = FileLock("data/users.json.lock")
+        with lock:
+            if not os.path.exists("data/users.json"):
+                return False
+            with open("data/users.json", "r") as f:
+                self.base = json.load(f)
+                return True
 
     def _dump(self) -> bool:
-        with open("data/users.json", "w") as f:
-            json.dump(self.base, f, indent=4)
-            return True
+        lock = FileLock("data/users.json.lock")
+        with lock:
+            with open("data/users.json", "w") as f:
+                json.dump(self.base, f, indent=4)
+                return True
 
     def delete_skin(self, user_id: int, skin_id: int) -> bool:
+        self.__load()
         try:
             for x in self.base["users"]:
                 if x["user_id"] == user_id:
@@ -70,6 +79,7 @@ class UserBD:
 
 
     def create_user(self, user: DataModel) -> (bool, str):
+        self.__load()
         try:
             for x in self.base["users"]:
                 if x["api_key"] == user.api_key:
@@ -104,9 +114,9 @@ class UserBD:
             logger.error(e)
             return False, 0
 
-        return False, 0
 
     def update_time(self, user: UpdateTimeData) -> bool:
+        self.__load()
         try:
             for x in self.base["users"]:
                 if x["user_id"] == user.user_id:
@@ -125,6 +135,7 @@ class UserBD:
             return False
 
     def update_skin(self, data: SkinSettings) -> bool:
+        self.__load()
         try:
             flag = False
             for x in self.base["users"]:
@@ -163,13 +174,16 @@ class UserBD:
         except Exception as e:
             logger.error(e)
             return False
+
     def get_info_by_id(self, id: int) -> dict | None:
+        self.__load()
         for x in self.base["users"]:
             if x["user_id"] == id:
                 return x
         return None
 
     def get_all_id(self) -> list:
+        self.__load()
         sp = []
         for x in self.base["users"]:
             sp.append((x["user_id"], x["time"]))
