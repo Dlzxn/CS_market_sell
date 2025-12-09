@@ -10,14 +10,7 @@
             "user_id": 1,
             "api_key": "AhA1ai90swp021wMaeJSnkN4kifY9yT",
             "time": 45,
-            "skins": [
-                {
-                    "id": 8539679449,
-                    "currently_price": null,
-                    "min_price": 100.0,
-                    "auto_reprice": false
-                }
-            ]
+            "skins": []
         },
         {
             "user_id": 2,

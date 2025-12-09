@@ -6,6 +6,52 @@ from src.service.logger_cfg.log import logger
 from src.service.market.api.cs_market import CSMarket
 from src.db.CRUD import user_database
 from src.service.market.checking_item_price import checking_item_price
+from src.model.DataModel import DataModel, UpdateTimeData, SkinSettings
+
+async def delete_skins(user_id):
+    user = user_database.get_info_by_id(user_id)
+    market = CSMarket(user["api_key"])
+    list_skins = await market.get_items_for_sale()
+    for x in user["skins"]:
+        flag = False
+        for skin in list_skins["items"]:
+            if skin["item_id"] == x["id"]:
+                flag = True
+                break
+        if not flag:
+            stat = user_database.delete_skin(user_id, x["id"])
+
+
+
+
+async def check_new_skins(user_id: int | str):
+    user = user_database.get_info_by_id(user_id)
+    market = CSMarket(user["api_key"])
+    info = await market.list_best_prices()
+    lots = info["items"]
+    list_for_sale = await market.get_inventory_steam()
+    all_id = [x[id] for x in user["skins"]]
+    for x in list_for_sale["items"]:
+        price = 0
+        if x["id"] in all_id:
+            continue
+        else:
+            for item in lots:
+                if x["market_hash_name"] == item["market_hash_name"]:
+                    price = item["price"]
+                    status = market.put_item_up_sale(x["id"], float(item["price"])*100 - 1)
+                    if status["status"]:
+                        skin = SkinSettings(user_id=user_id, skin_id=x["id"], enabled=True, min=0)
+                        stat = user_database.update_skin(skin)
+                        if stat:
+                            logger.info(f"Скин f{x["market_hash_name"]} выставлен за {float(item["price"])*100 - 1}")
+                        else:
+                            logger.error(f"При выставлении скина f{x["market_hash_name"]} случилась ошибка | "
+                                         f"Ошибка базы данных")
+                    else:
+                        logger.error(f"При выставлении скина f{x["market_hash_name"]} случилась ошибка | "
+                                     f"{status["message"]}")
+
 
 async def check_user_orders(user_id: int | str) -> None:
     time_start = time.time()

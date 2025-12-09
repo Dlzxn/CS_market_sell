@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from src.model.DataModel import DataModel, UpdateTimeData
 from src.Routers.user_rout import user_rout
 from src.db.CRUD import user_database
-from src.service.scheduler.trader import check_user_orders
+from src.service.scheduler.trader import check_user_orders, delete_skins, check_new_skins
 from src.service.logger_cfg.log import logger
 
 app = FastAPI()
@@ -52,6 +52,22 @@ def startup_event():
             seconds=time,
             args=[user_id],
             id=str(user_id),
+            max_instances=1
+        )
+        scheduler.add_job(
+            check_new_skins,
+            'interval',
+            seconds=10,
+            args=[user_id],
+            id="check_new_skins: " + str(user_id),
+            max_instances=1
+        )
+        scheduler.add_job(
+            delete_skins,
+            'interval',
+            seconds=1800,
+            args=[user_id],
+            id="delete_skins: "+ str(user_id),
             max_instances=1
         )
     print("APScheduler запущен и готов к работе.")

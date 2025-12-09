@@ -1,5 +1,5 @@
 // Переменные, используемые в settings.js
-const UPDATE_URL = "http://127.0.0.1:8000/users/updates_time";
+const UPDATE_URL = "https://salesinovbot1488.ru/users/updates_time";
 
 // Добавляем слушатель событий после загрузки DOM
 document.addEventListener("DOMContentLoaded", () => {
@@ -41,7 +41,6 @@ function handleSettingsSave() {
     chrome.storage.local.get("user_id", data => {
 
         const userId = data.user_id;
-        alert(userId)
         if (!userId) {
             alert("Ошибка: ID пользователя не найден. Авторизуйтесь снова.");
             return;

@@ -52,6 +52,23 @@ class UserBD:
             json.dump(self.base, f, indent=4)
             return True
 
+    def delete_skin(self, user_id: int, skin_id: int) -> bool:
+        try:
+            for x in self.base["users"]:
+                if x["user_id"] == user_id:
+                    for skin in x["skins"]:
+                        if skin["id"] == skin_id:
+                            x["skins"].remove(skin)
+                            self._dump()
+                            logger.info(f"Скин с айди f{skin_id} был удален с базы данных")
+                            break
+            logger.info(f"У пользователя с id {user_id} не нашлось скинов на удаление")
+            return True
+        except Exception as e:
+            logger.error(f"При удалении скинов произошла ошибка | {e}")
+            return False
+
+
     def create_user(self, user: DataModel) -> (bool, str):
         try:
             for x in self.base["users"]:

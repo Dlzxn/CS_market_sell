@@ -1,4 +1,4 @@
-const server_url = "http://127.0.0.1:8000/users/get_api";
+const server_url = "https://salesinovbot1488.ru/users/get_api";
 
 // Получаем ссылки на оба блока
 const apiBlock = document.getElementById("api-block");
@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
             appMainBlock.classList.remove("hidden");
             document.getElementById("uid").innerText = data.user_id || "Не получен";
         }
-
     });
 
     // 💡 ШАГ 2: ОБРАБОТЧИК КНОПКИ ПОВТОРНОГО ВХОДА
