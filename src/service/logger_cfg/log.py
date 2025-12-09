@@ -1,4 +1,4 @@
-import logging
+import logging, time
 from logging.handlers import RotatingFileHandler
 
 logger = logging.getLogger("main")
@@ -13,7 +13,7 @@ console = logging.StreamHandler()
 console.setFormatter(fmt)
 logger.addHandler(console)
 
-file = RotatingFileHandler("data/app.log", maxBytes=1_000_000, backupCount=5, encoding="utf-8")
+file = RotatingFileHandler(f"data/app_{time.time()}.log", maxBytes=1_000_000, backupCount=5, encoding="utf-8")
 file.setFormatter(fmt)
 logger.addHandler(file)
 

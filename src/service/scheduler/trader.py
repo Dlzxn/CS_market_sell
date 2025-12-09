@@ -8,20 +8,30 @@ from src.db.CRUD import user_database
 from src.service.market.checking_item_price import checking_item_price
 from src.model.DataModel import DataModel, UpdateTimeData, SkinSettings
 
+
 async def delete_skins(user_id):
     user = user_database.get_info_by_id(user_id)
     market = CSMarket(user["api_key"])
     list_skins = await market.get_items_for_sale()
+    index_list = []
     for x in user["skins"]:
         flag = False
         for skin in list_skins["items"]:
-            if skin["item_id"] == x["id"]:
+            if str(skin["item_id"]) == str(x["id"]):
                 flag = True
+                index_list.append(x["id"])
                 break
         if not flag:
             stat = user_database.delete_skin(user_id, x["id"])
-
-
+    for x in list_skins["items"]:
+        if x["item_id"] not in index_list:
+            skin = SkinSettings(user_id=user_id, skin_id=x["item_id"], enabled=True, min=0)
+            stat = user_database.update_skin(skin)
+            if stat:
+                logger.info(f"Скин {x["market_hash_name"]} добавлен в бд")
+            else:
+                logger.error(f"При выставлении скина случилась ошибка | "
+                             f"Ошибка базы данных")
 
 
 async def check_new_skins(user_id: int | str):
@@ -35,7 +45,7 @@ async def check_new_skins(user_id: int | str):
         print(list_for_sale)
         return 0
     print("Сервер ответил на соединение-инвентарь получен")
-    all_id = [x[id] for x in user["skins"]]
+    all_id = [x["id"] for x in user["skins"]]
     for x in list_for_sale["items"]:
         price = 0
         if x["id"] in all_id:
