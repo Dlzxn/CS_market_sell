@@ -4,7 +4,7 @@ import httpx
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.jobstores.base import JobLookupError
 from fastapi.middleware.cors import CORSMiddleware
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from src.model.DataModel import DataModel, UpdateTimeData
 from src.Routers.user_rout import user_rout
@@ -58,11 +58,11 @@ def startup_event():
         scheduler.add_job(
             check_new_skins,
             'interval',
-            seconds=300,
+            seconds=60,
             args=[user_id],
             id="check_new_skins: " + str(user_id),
             max_instances=1,
-            next_run_time=datetime.now()
+            next_run_time=datetime.now() + timedelta(seconds=5)
         )
         scheduler.add_job(
             delete_skins,
@@ -71,7 +71,7 @@ def startup_event():
             args=[user_id],
             id="delete_skins: "+ str(user_id),
             max_instances=1,
-            next_run_time=datetime.now()
+            next_run_time=datetime.now() + timedelta(seconds=5)
         )
     print("APScheduler запущен и готов к работе.")
 

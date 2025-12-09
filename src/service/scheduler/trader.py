@@ -10,7 +10,10 @@ from src.model.DataModel import DataModel, UpdateTimeData, SkinSettings
 
 
 async def delete_skins(user_id):
+    if user_id == 0:
+        return 0
     user = user_database.get_info_by_id(user_id)
+
     market = CSMarket(user["api_key"])
     list_skins = await market.get_items_for_sale()
     index_list = []
@@ -23,6 +26,7 @@ async def delete_skins(user_id):
                 break
         if not flag:
             stat = user_database.delete_skin(user_id, x["id"])
+
     for x in list_skins["items"]:
         if x["item_id"] not in index_list:
             skin = SkinSettings(user_id=user_id, skin_id=x["item_id"], enabled=True, min=0)
@@ -32,16 +36,19 @@ async def delete_skins(user_id):
             else:
                 logger.error(f"При выставлении скина случилась ошибка | "
                              f"Ошибка базы данных")
+    return 1
 
 
 async def check_new_skins(user_id: int | str):
+    if user_id == 0:
+        return 0
     user = user_database.get_info_by_id(user_id)
     market = CSMarket(user["api_key"])
     info = await market.list_best_prices()
     lots = info["items"]
     status, list_for_sale = await market.get_inventory_steam()
     if not status:
-        logger.error("Ошибка получения инвентаря")
+        logger.error(f"Ошибка получения инвентаря у id {user_id}")
         print(list_for_sale)
         return 0
     print("Сервер ответил на соединение-инвентарь получен")
@@ -69,6 +76,8 @@ async def check_new_skins(user_id: int | str):
 
 
 async def check_user_orders(user_id: int | str) -> None:
+    if user_id == 0:
+        return 0
     time_start = time.time()
     user = user_database.get_info_by_id(user_id)
     if user is None:
