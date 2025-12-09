@@ -192,7 +192,7 @@ class CSMarket:
 
             return {
                 'status': False,
-                'message': 'Предмет с данным ID не найден'
+                'message': str(response['error'])
             }
 
         return response

@@ -40,6 +40,7 @@ async def delete_skins(user_id):
 
 
 async def check_new_skins(user_id: int | str):
+    print("ЗАПУЩЕН ПРОСМОТР ДЛЯ АЙДИ:", user_id)
     if user_id == 0:
         return 0
     user = user_database.get_info_by_id(user_id)
@@ -66,13 +67,13 @@ async def check_new_skins(user_id: int | str):
                         skin = SkinSettings(user_id=user_id, skin_id=x["id"], enabled=True, min=0)
                         stat = user_database.update_skin(skin)
                         if stat:
-                            logger.info(f"Скин f{x["market_hash_name"]} выставлен за {float(item["price"])*100 - 1}")
+                            logger.info(f"Скин f{x["market_hash_name"]} выставлен за {float(item["price"])*100 - 1} | id_user: f{user_id}")
                         else:
                             logger.error(f"При выставлении скина f{x["market_hash_name"]} случилась ошибка | "
-                                         f"Ошибка базы данных")
+                                         f"Ошибка базы данных  | id_user: f{user_id}")
                     else:
                         logger.error(f"При выставлении скина f{x["market_hash_name"]} случилась ошибка | "
-                                     f"{status["message"]}")
+                                     f"{status["message"]}  | id_user: f{user_id}")
 
 
 async def check_user_orders(user_id: int | str) -> None:
@@ -85,6 +86,12 @@ async def check_user_orders(user_id: int | str) -> None:
     else:
         market = CSMarket(user["api_key"])
         list = await market.get_items_for_sale()
+        try:
+            stat = list["status"]
+            logger.error(f"Ошибка обращения get_items_for_sale() у айди {user_id}, message: {list["message"]}")
+            return 0
+        except KeyError:
+            pass
 
         for x in user["skins"]:
             if not x["auto_reprice"]:
@@ -124,7 +131,7 @@ async def check_user_orders(user_id: int | str) -> None:
                             if status["status"]:
                                 logger.info(f"Цена на предмет {hash_name} изменена на {price}")
                             else:
-                                logger.error(status["message"])
+                                logger.error(f"Ошибка изменения цены: {status["message"]}")
                             break
                         else:
                             logger.info(f"Цена на предмет {hash_name} не изменена")

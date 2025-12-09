@@ -46,6 +46,8 @@ def startup_event():
     all_id = user_database.get_all_id()
     print(all_id)
     for user_id, time in all_id:
+        if str(user_id) == "0":
+            continue
         print(user_id, time)
         scheduler.add_job(
             check_user_orders,
@@ -58,11 +60,11 @@ def startup_event():
         scheduler.add_job(
             check_new_skins,
             'interval',
-            seconds=60,
+            seconds=600,
             args=[user_id],
             id="check_new_skins: " + str(user_id),
             max_instances=1,
-            next_run_time=datetime.now() + timedelta(seconds=5)
+            next_run_time=datetime.now() + timedelta(seconds=120)
         )
         scheduler.add_job(
             delete_skins,
@@ -71,7 +73,7 @@ def startup_event():
             args=[user_id],
             id="delete_skins: "+ str(user_id),
             max_instances=1,
-            next_run_time=datetime.now() + timedelta(seconds=5)
+            next_run_time=datetime.now() + timedelta(seconds=1800)
         )
     print("APScheduler запущен и готов к работе.")
 
