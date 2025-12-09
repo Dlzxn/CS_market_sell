@@ -29,7 +29,12 @@ async def check_new_skins(user_id: int | str):
     market = CSMarket(user["api_key"])
     info = await market.list_best_prices()
     lots = info["items"]
-    list_for_sale = await market.get_inventory_steam()
+    status, list_for_sale = await market.get_inventory_steam()
+    if not status:
+        logger.error("Ошибка получения инвентаря")
+        print(list_for_sale)
+        return 0
+    print("Сервер ответил на соединение-инвентарь получен")
     all_id = [x[id] for x in user["skins"]]
     for x in list_for_sale["items"]:
         price = 0
@@ -39,7 +44,7 @@ async def check_new_skins(user_id: int | str):
             for item in lots:
                 if x["market_hash_name"] == item["market_hash_name"]:
                     price = item["price"]
-                    status = market.put_item_up_sale(x["id"], float(item["price"])*100 - 1)
+                    status = await market.put_item_up_sale(x["id"], float(item["price"])*100 - 1)
                     if status["status"]:
                         skin = SkinSettings(user_id=user_id, skin_id=x["id"], enabled=True, min=0)
                         stat = user_database.update_skin(skin)

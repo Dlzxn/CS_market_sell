@@ -1,20 +1,54 @@
 import aiohttp
+import time, asyncio
 from typing import Any
-
 
 
 class CSMarket:
     def __init__(self, api_key: str) -> None:
         self._api_key = api_key
+        self._min_delay = 0.2
+        self._last_request_time: float = 0
+        self._lock = asyncio.Lock()
 
-    async def get_inventory_steam(self, lang: str = 'ru') -> dict[str, Any]:
+    async def _limit_rate(self):
+        """
+            Summary: Ограничивает частоту запросов до
+
+            Parameters:
+
+            Return: None
+        """
+        async with self._lock:
+            elapsed = time.time() - self._last_request_time
+            if elapsed < self._min_delay:
+                await asyncio.sleep(self._min_delay - elapsed)
+            self._last_request_time = time.time()
+
+    async def _make_request(self, url: str, method: str):
+
+        await self._limit_rate()
+
+        async with aiohttp.ClientSession() as session:
+            async with session.request(url=url, method=method) as response:
+                response_status = response.status
+
+                if response_status == 200:
+                    res = await response.json()
+                    return response_status, res
+
+                return response_status, {
+                    'status': False,
+                    'message': 'Сервер не ответил на соединение'
+                }
+
+    async def get_inventory_steam(self, lang: str = 'ru') -> tuple[bool, dict[str, Any]]:
         """
             Summary: Получить весь инвентарь Steam аккаунта
                     * Получаем только те предметы, которые можно выставить на продажу
 
             Parameters:
                 * lang: str - язык. По умолчанию значение ru
-            
+
             Return:
                 Dict[str, Any]
 
@@ -33,23 +67,20 @@ class CSMarket:
                 }
         """
 
-        async with aiohttp.ClientSession() as session:
-            async with session.post(
-                url=f'https://market.csgo.com/api/v2/my-inventory?key={self._api_key}&lang={lang}'
-                ) as response:
+        status, response = await self._make_request(
+            url=f'https://market.csgo.com/api/v2/my-inventory?key={self._api_key}&lang={lang}',
+            method='post'
+        )
 
-                if response.status == 200:
+        if status == 200:
+            return True, response
 
-                    inventory_steam = await response.json()
-                    return inventory_steam
-
-                else:
-                    return False
+        return False, response
 
     async def get_items_for_sale(self) -> dict[str, Any]:
         """
-            Summary: Получить список предметов, выставленных на продажу
-             
+            Summary: Получить список предметов, выстравленных на продажу
+
             Parameters:
 
             Return:
@@ -78,23 +109,17 @@ class CSMarket:
                 }
         """
 
-        async with aiohttp.ClientSession() as session:
-            async with session.post(
-                url=f'https://market.csgo.com/api/v2/items?key={self._api_key}'
-                ) as response:
+        status, response = await self._make_request(
+            url=f'https://market.csgo.com/api/v2/items?key={self._api_key}',
+            method='post'
+        )
 
-                if response.status == 200:
+        if status == 200:
+            return response
 
-                    items = await response.json()
-                    return items
+        return response
 
-                else:
-                    return {
-                            'status': False,
-                            'message': 'Сервер не ответил на соединение'
-                            }
-
-    async def put_item_up_sale(self, item_id: int, price_item: int | float, currency: str ='RUB') -> dict[str, str]:
+    async def put_item_up_sale(self, item_id: int, price_item: int | float, currency: str = 'RUB') -> dict[str, str]:
         """
             Summary: Выставить предмет на продажу
 
@@ -112,31 +137,28 @@ class CSMarket:
                 }
         """
 
-        async with aiohttp.ClientSession() as session:
-            async with session.post(
-                url=f'https://market.csgo.com/api/v2/add-to-sale?key={self._api_key}&id={item_id}&price={price_item}&cur={currency}'
-                ) as response:
-            
-                if response.status == 200:
-                    res = await response.json()
+        status, response = await self._make_request(
+            url=f'https://market.csgo.com/api/v2/add-to-sale?key={self._api_key}&id={item_id}&price={price_item}&cur={currency}',
+            method='post'
+        )
 
-                    if res['success']:
-                        return {
-                            'status': True,
-                            'message': f'Предмет выставлен на продажу'
-                            }
-                    else:
-                        return {
-                            'status': False,
-                            'message': res['error']
-                            }
-                else:
-                    return {
-                            'status': False,
-                            'message': 'Сервер не ответил на соединение'
-                            }
+        if status == 200:
 
-    async def update_price_item(self, item_id: int | str, new_price_item: int | float, currency: str ='RUB') -> dict[str, str]:
+            if response['success']:
+                return {
+                    'status': True,
+                    'message': f'Предмет выставлен на продажу'
+                }
+
+            return {
+                'status': False,
+                'message': response['error']
+            }
+
+        return response
+
+    async def update_price_item(self, item_id: int | str, new_price_item: int | float, currency: str = 'RUB') -> dict[
+        str, str]:
         """
             Summary: Установить новую цена на предмет
 
@@ -155,71 +177,60 @@ class CSMarket:
                 }
         """
 
-        async with aiohttp.ClientSession() as session:
-            async with session.post(
-                url=f'https://market.csgo.com/api/v2/set-price?key={self._api_key}&item_id={item_id}&price={new_price_item}&cur={currency}'
-                ) as response:
+        status, response = await self._make_request(
+            url=f'https://market.csgo.com/api/v2/set-price?key={self._api_key}&item_id={item_id}&price={new_price_item}&cur={currency}',
+            method='post'
+        )
 
-                if response.status == 200:
-                    res = await response.json()
+        if status == 200:
 
-                    if res['success']:
-                        return {
-                            'status': True,
-                            'message': 'Цена изменена'
-                        }
-                    else:
-                        return {
-                            'status': False,
-                            'message': 'Предмет с данным ID не найден'
-                            }
-                else:
-                    return {
-                            'status': False,
-                            'message': 'Сервер не ответил на соединение'
-                            }
+            if response['success']:
+                return {
+                    'status': True,
+                    'message': 'Цена изменена'
+                }
+
+            return {
+                'status': False,
+                'message': 'Предмет с данным ID не найден'
+            }
+
+        return response
 
     async def list_best_prices(self) -> dict[str, Any]:
-            """
-                Summary: Получить список лучший цен
+        """
+            Summary: Получить список лучший цен
 
-                Parameters:
-                
-                Return:
-                    Dict[str, Any]
+            Parameters:
 
-                    {
-                        "success": true,
-                        "time": 1765120214,
-                        "currency": "RUB",
-                        "items": [
-                            {
-                                "market_hash_name": "'Blueberries' Buckshot | NSWC SEAL",
-                                "volume": "54",
-                                "price": "1436.87"
-                            },
-                            {
-                                "market_hash_name": "'Medium Rare' Crasswater | Guerrilla Warfare",
-                                "volume": "52",
-                                "price": "3212.67"
-                            },
-                        ...
-                    }
-            """
+            Return:
+                Dict[str, Any]
 
-            async with aiohttp.ClientSession() as session:
-                async with session.get(
-                    url='https://market.csgo.com/api/v2/prices/RUB.json'
-                ) as response:
-                    
-                    if response.status == 200:
+                {
+                    "success": true,
+                    "time": 1765120214,
+                    "currency": "RUB",
+                    "items": [
+                        {
+                            "market_hash_name": "'Blueberries' Buckshot | NSWC SEAL",
+                            "volume": "54",
+                            "price": "1436.87"
+                        },
+                        {
+                            "market_hash_name": "'Medium Rare' Crasswater | Guerrilla Warfare",
+                            "volume": "52",
+                            "price": "3212.67"
+                        },
+                    ...
+                }
+        """
 
-                        data = await response.json()
+        status, response = await self._make_request(
+            url='https://market.csgo.com/api/v2/prices/RUB.json',
+            method='get'
+        )
 
-                        return data
-                    
-                    else:
-                        return {
-                                'status': False,
-                                'message': 'Сервер не ответил на соединение'
-                                }
+        if status == 200:
+            return response
+
+        return response

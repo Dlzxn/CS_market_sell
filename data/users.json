@@ -10,7 +10,68 @@
             "user_id": 1,
             "api_key": "AhA1ai90swp021wMaeJSnkN4kifY9yT",
             "time": 45,
-            "skins": []
+            "skins": [
+                {
+                    "id": 48238862563,
+                    "currently_price": null,
+                    "min_price": 0.0,
+                    "auto_reprice": true
+                },
+                {
+                    "id": 48100270023,
+                    "currently_price": null,
+                    "min_price": 0.0,
+                    "auto_reprice": true
+                },
+                {
+                    "id": 48062529249,
+                    "currently_price": null,
+                    "min_price": 0.0,
+                    "auto_reprice": true
+                },
+                {
+                    "id": 48036741248,
+                    "currently_price": null,
+                    "min_price": 0.0,
+                    "auto_reprice": true
+                },
+                {
+                    "id": 48032997770,
+                    "currently_price": null,
+                    "min_price": 0.0,
+                    "auto_reprice": true
+                },
+                {
+                    "id": 47989671813,
+                    "currently_price": null,
+                    "min_price": 0.0,
+                    "auto_reprice": true
+                },
+                {
+                    "id": 47964381044,
+                    "currently_price": null,
+                    "min_price": 0.0,
+                    "auto_reprice": true
+                },
+                {
+                    "id": 47559030227,
+                    "currently_price": null,
+                    "min_price": 0.0,
+                    "auto_reprice": true
+                },
+                {
+                    "id": 47538605956,
+                    "currently_price": null,
+                    "min_price": 0.0,
+                    "auto_reprice": true
+                },
+                {
+                    "id": 47538603138,
+                    "currently_price": null,
+                    "min_price": 0.0,
+                    "auto_reprice": true
+                }
+            ]
         },
         {
             "user_id": 2,
