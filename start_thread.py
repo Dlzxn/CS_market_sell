@@ -17,6 +17,8 @@ def start():
     all_id = user_database.get_all_id()
     proc_list = []
     for user_id, _ in all_id:
+        if user_id == 0:
+            continue
         check_file = open(f"data/app_check_{user_id}.log", 'w', encoding='utf-8')
         del_file = open(f"data/app_del_{user_id}.log", 'w', encoding='utf-8')
         proc_check = subprocess.Popen([ENV_PYTHON, "app_check.py", str(user_id)],

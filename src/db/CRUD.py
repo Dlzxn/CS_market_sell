@@ -1,194 +1,144 @@
-import json, os
+from pymongo import MongoClient
+from pymongo.errors import DuplicateKeyError
 from src.service.logger_cfg.log import logger
 from src.model.DataModel import DataModel, UpdateTimeData, SkinSettings
-from typing import Any
-from filelock import FileLock
+from typing import Any, List, Tuple, Dict
+import os
+
+MONGO_URI = os.environ.get("MONGO_URI", "mongodb://localhost:27017/")
+DATABASE_NAME = "cs_market_db"
+COLLECTION_NAME = "users"
 
 
 class UserBD:
-    """
-    Пример db:
-    json = {
-        "users":
-            [
-                {
-                    "user_id": 1,
-                    "api_key": "3R2552fe4fDff424",
-                    "time": 30,
-                    "skins":[
-                        {
-                            "id": 1,
-                            "currently_price": 233.45,
-                            "min_price": 230,
-                            "auto_reprice": True,
-                        }
-                    ]
-                },
-                {
-                    "user_id": 2,
-                    "api_key": "343TTR4353AFW3FA56FA4FW",
-                    "time": 30,
-                    "skins":[
-                        {
-                            "id": 542,
-                            "currently_price": 276.85,
-                            "min_price": 230,
-                            "auto_reprice": True,
-                        }
-                    ]
-                },
-            ]
-    }
-    """
     def __init__(self) -> None:
-        self.base = None
-        self.__load()
+        try:
+            print("Попытка подключения....")
+            self.client = MongoClient(MONGO_URI)
+            self.db = self.client[DATABASE_NAME]
+            self.collection = self.db[COLLECTION_NAME]
 
-    def __load(self) -> bool:
-        lock = FileLock("data/users.json.lock")
-        with lock:
-            if not os.path.exists("data/users.json"):
-                return False
-            with open("data/users.json", "r") as f:
-                self.base = json.load(f)
-                return True
+            self.collection.create_index("user_id", unique=True)
+            self.collection.create_index("api_key", unique=True)
+            logger.info("Успешное подключение к MongoDB.")
 
-    def _dump(self) -> bool:
-        lock = FileLock("data/users.json.lock")
-        with lock:
-            with open("data/users.json", "w") as f:
-                json.dump(self.base, f, indent=4)
-                return True
+        except ConnectionError as e:
+            logger.error(f"Ошибка подключения к MongoDB: {e}")
+            raise ConnectionError("Не удалось подключиться к базе данных MongoDB.")
+        except Exception as e:
+            logger.error(f"Непредвиденная ошибка при инициализации БД: {e}")
+            raise
 
     def delete_skin(self, user_id: int, skin_id: int) -> bool:
-        self.__load()
         try:
-            for x in self.base["users"]:
-                if x["user_id"] == user_id:
-                    for skin in x["skins"]:
-                        if skin["id"] == skin_id:
-                            x["skins"].remove(skin)
-                            self._dump()
-                            logger.info(f"Скин с айди f{skin_id} был удален с базы данных")
-                            break
-            logger.info(f"У пользователя с id {user_id} не нашлось скинов на удаление")
-            return True
+            result = self.collection.update_one(
+                {"user_id": user_id},
+                {"$pull": {"skins": {"id": skin_id}}}
+            )
+
+            if result.modified_count > 0:
+                logger.info(f"Скин с ID {skin_id} был удален из базы данных у пользователя {user_id}.")
+                return True
+            else:
+                logger.info(f"Скин с ID {skin_id} не найден для удаления у пользователя {user_id}.")
+                return False
         except Exception as e:
             logger.error(f"При удалении скинов произошла ошибка | {e}")
             return False
 
-
-    def create_user(self, user: DataModel) -> (bool, str):
-        self.__load()
+    def create_user(self, user_data: DataModel) -> Tuple[bool, int]:
         try:
-            for x in self.base["users"]:
-                if x["api_key"] == user.api_key:
-                    user = x
-                    return True, user["user_id"]
+            existing_user = self.collection.find_one({"api_key": user_data.api_key})
+            if existing_user:
+                return True, existing_user["user_id"]
 
-            count = len(self.base["users"])
+            last_user = self.collection.find_one(sort=[("user_id", -1)])
+            new_user_id = (last_user["user_id"] + 1) if last_user else 0
 
-            user = {
-                "user_id": count,
-                "api_key": user.api_key,
+            new_document = {
+                "user_id": new_user_id,
+                "api_key": user_data.api_key,
                 "time": 30,
                 "skins": []
             }
 
-            self.base["users"].append(user)
-            if self._dump():
-                logger.info("Base dumped with created user")
-                return True, count
-            else:
-                return False, 0
+            self.collection.insert_one(new_document)
+            logger.info(f"Новый пользователь создан с ID: {new_user_id}")
+            return True, new_user_id
 
-        except KeyError:
-            logger.error("KeyError | create_user function")
+        except DuplicateKeyError:
+            logger.error("Ошибка DuplicateKeyError при создании пользователя.")
             return False, 0
-
-        except FileNotFoundError:
-            logger.error("FileNotFound | create_user function")
-            return False, 0
-
         except Exception as e:
-            logger.error(e)
+            logger.error(f"Ошибка при создании пользователя | {e}")
             return False, 0
 
-
-    def update_time(self, user: UpdateTimeData) -> bool:
-        self.__load()
+    def update_time(self, user_data: UpdateTimeData) -> bool:
         try:
-            for x in self.base["users"]:
-                if x["user_id"] == user.user_id:
-                    x["time"] = user.check_interval
-                    self._dump()
-                    logger.info("User updated time | update_time function")
-                    return True
-            return False
-
-        except KeyError:
-            logger.error("KeyError | update_time function")
+            result = self.collection.update_one(
+                {"user_id": user_data.user_id},
+                {"$set": {"time": user_data.check_interval}}
+            )
+            if result.modified_count > 0:
+                logger.info(f"User {user_data.user_id} updated time.")
+                return True
             return False
 
         except Exception as e:
-            logger.error(e)
+            logger.error(f"Ошибка обновления времени | {e}")
             return False
 
     def update_skin(self, data: SkinSettings) -> bool:
-        self.__load()
         try:
-            flag = False
-            for x in self.base["users"]:
-                if x["user_id"] == data.user_id:
-                    user = x
-                    flag = True
-            if not flag:
-                return False
-            flag = False
-            for x in user["skins"]:
-                if x["id"] == data.skin_id:
-                    flag = True
-                    x["min_price"] = data.min
-                    x["auto_reprice"] = data.enabled
-                    self._dump()
-                    logger.info("User updated skins | update_skins function")
-                    return True
-            if flag == False:
-                skin = {
-                            "id": data.skin_id,
-                            "currently_price": None,
-                            "min_price": data.min,
-                            "auto_reprice": data.enabled,
-                        }
-                user["skins"].append(skin)
-                self._dump()
-                logger.info("User updated skins | update_skins function")
+            result = self.collection.update_one(
+                {"user_id": data.user_id, "skins.id": data.skin_id},
+                {"$set": {
+                    "skins.$.min_price": data.min,
+                    "skins.$.auto_reprice": data.enabled
+                }}
+            )
+
+            if result.modified_count > 0:
+                logger.info(f"Скин {data.skin_id} обновлен у пользователя {data.user_id}.")
                 return True
 
-            return False
+            if result.matched_count == 0:
+                new_skin = {
+                    "id": data.skin_id,
+                    "currently_price": None,
+                    "min_price": data.min,
+                    "auto_reprice": data.enabled,
+                }
 
-        except KeyError:
-            logger.error("KeyError | update_skins function")
+                result = self.collection.update_one(
+                    {"user_id": data.user_id},
+                    {"$push": {"skins": new_skin}}
+                )
+
+                if result.modified_count > 0:
+                    logger.info(f"Скин {data.skin_id} добавлен к пользователю {data.user_id}.")
+                    return True
+                else:
+                    return False
+
             return False
 
         except Exception as e:
-            logger.error(e)
+            logger.error(f"Ошибка обновления/добавления скина: {e}")
             return False
 
-    def get_info_by_id(self, id: int) -> dict | None:
-        self.__load()
-        for x in self.base["users"]:
-            if x["user_id"] == id:
-                return x
-        return None
+    def get_info_by_id(self, user_id: int) -> Dict[str, Any] | None:
+        user_document = self.collection.find_one({"user_id": user_id}, {"_id": 0})
+        return user_document
 
-    def get_all_id(self) -> list:
-        self.__load()
-        sp = []
-        for x in self.base["users"]:
-            sp.append((x["user_id"], x["time"]))
-        return sp
+    def get_all_id(self) -> List[Tuple[int, int]]:
+        users_cursor = self.collection.find({}, {"_id": 0, "user_id": 1, "time": 1})
 
+        results = []
+        for user in users_cursor:
+            results.append((user.get("user_id"), user.get("time")))
+
+        return results
 
 
 user_database = UserBD()
