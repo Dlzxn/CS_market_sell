@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Авторепрайсер</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div id="api-block">
+        <h2>Введите API-KEY</h2>
+        <input type="text" id="api-input" placeholder="API KEY...">
+        <button id="api-save-btn">Сохранить</button>
+        <p>
+            <a href="https://salesinovbot1488.ru/info" id="api-guide" target="_blank">🛈 Как получить API key?</a>
+        </p>
+    </div>
+
+    <div id="app-main">
+        <h2>Расширение готово</h2>
+        <p>API проверен ✔</p>
+
+        <div id="settings-container">
+            <h3>Настройка интервала (секунды)</h3>
+            <div class="setting-row">
+                <label for="check-interval-input">Интервал проверки (сек, ≥15):</label>
+                <input type="number" id="check-interval-input" min="15">
+            </div>
+            <button id="settings-save-btn">Сохранить интервал</button>
+            <span id="save-status" style="color: #ffc107; display:none; font-size: 0.85em; margin-top: 5px;">Настройки сохранены!</span>
+        </div>
+
+        <p class="user-info">ID пользователя: <span id="uid"></span></p>
+
+        <button id="relogin-btn" style="
+            background: #cc3333;
+            color: white;
+            margin-top: 10px;
+            padding: 8px;
+        ">
+            Повторный вход (Сменить API-KEY)
+        </button>
+        </div>
+
+    <script src="popup.js"></script>
+    <script src="update_time.js"></script>
+</body>
+</html>

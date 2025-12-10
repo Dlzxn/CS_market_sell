@@ -13,6 +13,8 @@ async def delete_skins(user_id):
     if user_id == 0:
         return 0
     user = user_database.get_info_by_id(user_id)
+    print(user)
+    print("Получены данные с бд о пользователи с айди:", user_id)
 
     market = CSMarket(user["api_key"])
     list_skins = await market.get_items_for_sale()

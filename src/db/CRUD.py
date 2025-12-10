@@ -98,11 +98,11 @@ class UserBD:
                 }}
             )
 
-            if result.modified_count > 0:
+            if int(result.modified_count) > 0:
                 logger.info(f"Скин {data.skin_id} обновлен у пользователя {data.user_id}.")
                 return True
 
-            if result.matched_count == 0:
+            if int(result.matched_count) == 0:
                 new_skin = {
                     "id": data.skin_id,
                     "currently_price": None,
@@ -115,12 +115,13 @@ class UserBD:
                     {"$push": {"skins": new_skin}}
                 )
 
-                if result.modified_count > 0:
+                if int(result.modified_count) > 0:
                     logger.info(f"Скин {data.skin_id} добавлен к пользователю {data.user_id}.")
                     return True
                 else:
+                    logger.info("При выставлении скина ничего не поменялось стр 122")
                     return False
-
+            logger.info(f"Скин уже есть в базе данных")
             return False
 
         except Exception as e:

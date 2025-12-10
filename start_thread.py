@@ -19,6 +19,7 @@ def start():
     for user_id, _ in all_id:
         if user_id == 0:
             continue
+        print(f"User_id: {user_id}", file=sys.stdout)
         check_file = open(f"data/app_check_{user_id}.log", 'w', encoding='utf-8')
         del_file = open(f"data/app_del_{user_id}.log", 'w', encoding='utf-8')
         proc_check = subprocess.Popen([ENV_PYTHON, "app_check.py", str(user_id)],
@@ -30,7 +31,7 @@ def start():
                          )
         proc_list.append((proc_check, proc_del, check_file, del_file))
     print(len(proc_list))
-    time.sleep(5)
+    time.sleep(1800)
     for proc_check, proc_del, check_file, del_file in proc_list:
         proc_check.terminate()
         proc_del.terminate()

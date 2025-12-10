@@ -1,0 +1,70 @@
+.auto-reprice-btn {
+    background: #ffcc00;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+.auto-reprice-btn:hover {
+    transform: scale(1.1);
+    background: #e6b800;
+}
+
+.auto-reprice-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: #1f1f2e;
+    border: 2px solid #ffcc00;
+    padding: 18px;
+    border-radius: 10px;
+    width: 320px;
+    z-index: 999999;
+    display: none;
+    color: white;
+    font-size: 15px;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+.auto-reprice-modal.show {
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+.auto-reprice-modal h2 {
+    margin: 0 0 10px;
+}
+.auto-reprice-modal label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.auto-reprice-modal input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 10px;
+}
+.auto-reprice-modal button {
+    width: 100%;
+    padding: 7px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.auto-reprice-modal .save-btn {
+    background: #ffcc00;
+    color: black;
+}
+.auto-reprice-modal .close-btn {
+    background: #333;
+    color: white;
+    margin-top: 6px;
+}
