@@ -178,7 +178,7 @@ class CSMarket:
         """
 
         status, response = await self._make_request(
-            url=f'https://market.csgo.com/api/v2/set-price?key={self._api_key}&item_id={item_id}&price={new_price_item}&cur={currency}',
+            url=f'https://market.csgo.com/api/v2/set-price?key={self._api_key}&item_id={item_id}&price={int(new_price_item)}&cur={currency}',
             method='post'
         )
 
@@ -192,7 +192,7 @@ class CSMarket:
 
             return {
                 'status': False,
-                'message': str(response['error'])
+                'message': str(response['error']) + str(new_price_item)
             }
 
         return response

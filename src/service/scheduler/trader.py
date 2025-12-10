@@ -118,7 +118,7 @@ async def check_user_orders(user_id: int | str) -> None:
                                 flag = True
                                 break
                         status = checking_item_price(user_id, y["item_id"], price)
-                        match(status):
+                        match status:
                             case 0:
                                 price += 2
                             case 1:
