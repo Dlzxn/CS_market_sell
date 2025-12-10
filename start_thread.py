@@ -28,12 +28,14 @@ def start():
                          stdout=del_file,
                          stderr=del_file
                          )
-        proc_list.append((proc_check, proc_del))
+        proc_list.append((proc_check, proc_del, check_file, del_file))
     print(len(proc_list))
     time.sleep(5)
-    for proc_check, proc_del in proc_list:
+    for proc_check, proc_del, check_file, del_file in proc_list:
         proc_check.terminate()
         proc_del.terminate()
+        check_file.close()
+        del_file.close()
     start()
 
 start()
