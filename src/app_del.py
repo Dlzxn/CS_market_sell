@@ -23,7 +23,7 @@ def startup_event(user_id):
     scheduler.add_job(
             delete_skins,
             'interval',
-            seconds=300,
+            seconds=180,
             args=[user_id],
             id="delete_skins: "+ str(user_id),
             max_instances=1,

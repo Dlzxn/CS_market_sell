@@ -98,7 +98,8 @@ async def check_new_skins(user_id: int | str):
         if item_hash_name in best_price_map:
 
             try:
-                best_price_cents = int(float(best_price_map[item_hash_name]))
+                price_main_currency = float(best_price_map[item_hash_name])
+                best_price_cents = int(price_main_currency * 100)
             except ValueError:
                 logger.error(f"Неверный формат цены для {item_hash_name}")
                 continue
@@ -107,6 +108,16 @@ async def check_new_skins(user_id: int | str):
 
             if sale_price_cents <= 0:
                 logger.warning(f"Цена {item_hash_name} слишком низка ({best_price_cents}). Пропуск.")
+                continue
+
+            can_set_price = user_database.checking_item_price(
+                user_id=user_id,
+                item_id=item_id_str,
+                best_market_price_cents=best_price_cents
+            )
+
+            if can_set_price == 0:
+                logger.info(f"Скин {item_hash_name} (ID: {item_id_str}): Пропуск выставления (защита от демпинга).")
                 continue
 
             status = await market.put_item_up_sale(item_steam["id"], sale_price_cents)
