@@ -59,47 +59,72 @@ async def delete_skins(user_id):
     return
 
 
-
-
-
+from src.model.DataModel import SkinSettings
 
 
 async def check_new_skins(user_id: int | str):
     logger.info("ЗАПУЩЕН ПРОСМОТР ДЛЯ АЙДИ: " + str(user_id))
     if user_id == 0:
         return 0
+
     user = user_database.get_info_by_id(user_id)
     market = CSMarket(user["api_key"])
-    info = await market.list_best_prices()
-    lots = info["items"]
-    status, list_for_sale = await market.get_inventory_steam()
-    if not status:
-        logger.error(f"Ошибка получения инвентаря у id {user_id}")
-        print(list_for_sale)
-        return 0
-    logger.info("Сервер ответил на соединение-инвентарь получен")
-    all_id = [x["id"] for x in user["skins"]]
-    for x in list_for_sale["items"]:
-        price = 0
-        if x["id"] in all_id:
-            continue
-        else:
-            for item in lots:
-                if x["market_hash_name"] == item["market_hash_name"]:
-                    price = item["price"]
-                    status = await market.put_item_up_sale(x["id"], float(item["price"])*100 - 1)
-                    if status["status"]:
-                        skin = SkinSettings(user_id=user_id, skin_id=x["id"], enabled=True, min=0)
-                        stat = user_database.update_skin(skin)
-                        if stat:
-                            logger.info(f"Скин f{x["market_hash_name"]} выставлен за {float(item["price"])*100 - 1} | id_user: f{user_id}")
-                        else:
-                            logger.error(f"При выставлении скина f{x["market_hash_name"]} случилась ошибка | "
-                                         f"Ошибка базы данных  | id_user: f{user_id}")
-                    else:
-                        logger.error(f"При выставлении скина f{x["market_hash_name"]} случилась ошибка | "
-                                     f"{status["message"]}  | id_user: f{user_id}")
 
+    info_best_prices = await market.list_best_prices()
+    status_inv, list_for_sale = await market.get_inventory_steam()
+
+    if not status_inv:
+        logger.error(f"Ошибка получения инвентаря у id {user_id}")
+        return 0
+
+    logger.info("Сервер ответил на соединение-инвентарь получен")
+
+    best_price_map = {
+        item["market_hash_name"]: item["price"]
+        for item in info_best_prices.get("items", [])
+    }
+
+    db_tracked_ids = {str(x["id"]) for x in user.get("skins", [])}
+
+    inventory_items = list_for_sale.get("items", [])
+
+    for item_steam in inventory_items:
+        item_id_str = str(item_steam["id"])
+        item_hash_name = item_steam["market_hash_name"]
+
+        if item_id_str in db_tracked_ids:
+            continue
+
+        if item_hash_name in best_price_map:
+
+            try:
+                best_price_cents = int(float(best_price_map[item_hash_name]))
+            except ValueError:
+                logger.error(f"Неверный формат цены для {item_hash_name}")
+                continue
+
+            sale_price_cents = best_price_cents - 1
+
+            if sale_price_cents <= 0:
+                logger.warning(f"Цена {item_hash_name} слишком низка ({best_price_cents}). Пропуск.")
+                continue
+
+            status = await market.put_item_up_sale(item_steam["id"], sale_price_cents)
+
+            if status.get("status"):
+                skin = SkinSettings(user_id=user_id, skin_id=item_steam["id"], enabled=True, min=0)
+                stat_db = user_database.update_skin(skin)
+
+                if stat_db:
+                    logger.info(f"Скин {item_hash_name} выставлен за {sale_price_cents} | id_user: {user_id}")
+                else:
+                    logger.error(f"При выставлении скина {item_hash_name} случилась ошибка | "
+                                 f"Ошибка базы данных при обновлении скина | id_user: {user_id}")
+            else:
+                logger.error(f"При выставлении скина {item_hash_name} случилась ошибка | "
+                             f"{status.get("message", "Неизвестная ошибка API")} | id_user: {user_id}")
+
+    return 1
 
 async def check_user_orders(user_id: int | str) -> None:
     user = user_database.get_info_by_id(user_id)
