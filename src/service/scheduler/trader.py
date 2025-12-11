@@ -46,7 +46,7 @@ async def delete_skins(user_id):
 
 
 async def check_new_skins(user_id: int | str):
-    logger.info("ЗАПУЩЕН ПРОСМОТР ДЛЯ АЙДИ:", user_id)
+    logger.info("ЗАПУЩЕН ПРОСМОТР ДЛЯ АЙДИ:" + user_id)
     if user_id == 0:
         return 0
     user = user_database.get_info_by_id(user_id)
