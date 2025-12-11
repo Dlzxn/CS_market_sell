@@ -2,12 +2,15 @@ from pymongo import MongoClient
 from pymongo.errors import DuplicateKeyError
 from src.service.logger_cfg.log import logger
 from src.model.DataModel import DataModel, UpdateTimeData, SkinSettings
-from typing import Any, List, Tuple, Dict
+from typing import Any, List, Tuple, Dict, Union
 import os
 
 MONGO_URI = os.environ.get("MONGO_URI", "mongodb://localhost:27017/")
 DATABASE_NAME = "cs_market_db"
 COLLECTION_NAME = "users"
+
+CACHE_COLLECTION_NAME = "checking_item_price_cache"
+PRICE_DECREMENT = 1
 
 
 class UserBD:
@@ -16,10 +19,18 @@ class UserBD:
             print("Попытка подключения....")
             self.client = MongoClient(MONGO_URI)
             self.db = self.client[DATABASE_NAME]
+            # Основная коллекция пользователей
             self.collection = self.db[COLLECTION_NAME]
+            # Новая коллекция для кэша цен
+            self.price_cache_collection = self.db[CACHE_COLLECTION_NAME]
 
+            # Создание уникальных индексов для основной коллекции
             self.collection.create_index("user_id", unique=True)
             self.collection.create_index("api_key", unique=True)
+
+            # Создание уникального индекса для коллекции кэша (по item_id)
+            self.price_cache_collection.create_index("item_id", unique=True)
+
             logger.info("Успешное подключение к MongoDB.")
 
         except ConnectionError as e:
@@ -28,6 +39,57 @@ class UserBD:
         except Exception as e:
             logger.error(f"Непредвиденная ошибка при инициализации БД: {e}")
             raise
+
+    def checking_item_price(
+            self,
+            user_id: Union[int, str],
+            item_id: Union[int, str],
+            best_market_price_cents: int
+    ) -> int:
+        """
+        Summary: Проверка стоимости скина, предотвращающая демпинг между своими аккаунтами,
+                 используя коллекцию 'checking_item_price_cache'.
+
+        Return: 1 - Разрешить обновление, 0 - Запретить.
+        """
+
+        item_id_str = str(item_id)
+        user_id_str = str(user_id)
+        desired_price = best_market_price_cents - PRICE_DECREMENT
+
+        cached_data = self.price_cache_collection.find_one({"item_id": item_id_str})
+
+        new_price_and_user = {"value": desired_price, "user_id": user_id_str}
+
+        if cached_data:
+            cached_price = cached_data['value']
+            cached_user_id = cached_data['user_id']
+
+            if user_id_str == cached_user_id:
+                self.price_cache_collection.update_one(
+                    {"item_id": item_id_str},
+                    {"$set": new_price_and_user}
+                )
+                return 1
+
+            if best_market_price_cents < cached_price:
+                self.price_cache_collection.update_one(
+                    {"item_id": item_id_str},
+                    {"$set": new_price_and_user}
+                )
+                return 1
+            else:
+                return 0
+
+        else:
+            document = {"item_id": item_id_str, **new_price_and_user}
+
+            try:
+                self.price_cache_collection.insert_one(document)
+            except DuplicateKeyError:
+                logger.warning(f"Race Condition: item_id {item_id_str} уже был вставлен.")
+
+            return 1
 
     def delete_skin(self, user_id: int, skin_id: int) -> bool:
         try:

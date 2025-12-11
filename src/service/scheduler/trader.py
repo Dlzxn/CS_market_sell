@@ -141,7 +141,7 @@ async def check_user_orders(user_id: int | str) -> None:
                 logger.info(f"Скин {skin_hash} стоит по актуальному прайсу")
                 continue
 
-            status = checking_item_price(user_id, item["item_id"], price)
+            status = user_database.checking_item_price(user_id, item["item_id"], price)
             match status:
                 case 0:
                     logger.info(f"Защита от демпинга для скина {skin_hash}, актуальная цена станет {price + 1}")
