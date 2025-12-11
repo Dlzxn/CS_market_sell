@@ -2,11 +2,19 @@ from datetime import datetime, timedelta, date
 
 
 def check_money(data):
+    # Проверяем, что запрос успешен и что есть ключ "items"
+    if not data.get("success") or not isinstance(data.get("items"), list):
+        return 0.0
+
     return_sum = 0.0
-    for x in data["data"]:
-        if x["event"] != "sell":
-            return_sum += x["paid"]
-    return return_sum
+
+    for item in data["items"]:
+        price_cents = item.get("price")
+
+        if price_cents is not None:
+            return_sum += (price_cents / 100.0)
+
+    return round(return_sum, 2)
 
 
 def get_timestamps_in_seconds() -> dict:
