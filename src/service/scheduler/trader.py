@@ -10,39 +10,58 @@ from src.model.DataModel import DataModel, UpdateTimeData, SkinSettings
 
 
 async def delete_skins(user_id):
-    if user_id == 0:
-        return 0
     user = user_database.get_info_by_id(user_id)
-    print(user)
-    print("Получены данные с бд о пользователи с айди:", user_id)
+
+    if not user:
+        logger.warning(f"delete_skins: Пользователь с ID {user_id} не найден в БД.")
+        return
+
+    logger.info(f"Начало проверки и удаления проданных скинов для ID: {user_id}")
 
     market = CSMarket(user["api_key"])
-    list_skins = await market.get_items_for_sale()
-    index_list = []
-    for x in user["skins"]:
-        flag = False
-        for skin in list_skins["items"]:
-            if str(skin["item_id"]) == str(x["id"]):
-                flag = True
-                index_list.append(x["id"])
-                break
-        if not flag:
-            stat = user_database.delete_skin(user_id, x["id"])
-            if stat:
-                logger.info(f"Скин {x["market_hash_name"]} был удаленн из бд у id {user_id}")
-            else:
-                logger.error(f"Ошибка удаления скина {x["market_hash_name"]} у id {user_id}")
+    list_skins_response = await market.get_items_for_sale()
 
-    for x in list_skins["items"]:
-        if x["item_id"] not in index_list:
-            skin = SkinSettings(user_id=user_id, skin_id=x["item_id"], enabled=True, min=0)
-            stat = user_database.update_skin(skin)
+    if not list_skins_response.get("success"):
+        logger.error(
+            f"Ошибка получения списка предметов для продажи у id {user_id}: {list_skins_response.get('error', 'Нет информации об ошибке')}")
+        return
+
+    active_api_ids = {str(skin["item_id"]) for skin in list_skins_response.get("items", [])}
+
+    skins_to_check = user.get("skins", [])
+
+    for skin in skins_to_check:
+        db_item_id = str(skin.get("id"))
+
+        if db_item_id not in active_api_ids:
+
+            item_name = skin.get("market_hash_name", f"ID:{db_item_id}")
+
+            stat = user_database.delete_skin(user_id, int(db_item_id))
+
             if stat:
-                logger.info(f"Скин {x["market_hash_name"]} добавлен в бд")
+                logger.info(f"Скин {item_name} (ID: {db_item_id}) удален из БД у id {user_id} (Продан/Снят).")
             else:
-                logger.error(f"При выставлении скина случилась ошибка | "
-                             f"Ошибка базы данных")
-    return 1
+                logger.error(f"Ошибка удаления скина {item_name} из БД у id {user_id}.")
+
+    cached_items = user_database.get_all_cached_items()
+
+    for cached_item in cached_items:
+        cached_item_id = str(cached_item["item_id"])
+
+        if cached_item_id not in active_api_ids:
+
+            stat = user_database.delete_cached_item(cached_item_id)
+
+            if stat:
+                logger.info(f"Кэш: Запись о предмете {cached_item_id} удалена из кэша цен (Продан/Снят).")
+
+    return
+
+
+
+
+
 
 
 async def check_new_skins(user_id: int | str):
@@ -156,7 +175,6 @@ async def check_user_orders(user_id: int | str) -> None:
                     pass
 
             status = await market.update_price_item_mhn(market_hash_name=skin_hash, new_price_item=price-1)
-            print(status)
             try:
                 if status["success"]:
                     logger.info(f"Цена на предмет {skin_hash} изменена на {price-1}")

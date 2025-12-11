@@ -89,7 +89,39 @@ class UserBD:
             except DuplicateKeyError:
                 logger.warning(f"Race Condition: item_id {item_id_str} уже был вставлен.")
 
-            return 1
+            return 0
+
+    def delete_cached_item(self, item_id: Union[int, str]) -> bool:
+        """
+        Удаляет запись о предмете из коллекции кэша цен.
+        Используется, если предмет был продан или снят с продажи.
+        """
+        item_id_str = str(item_id)
+        try:
+            result = self.price_cache_collection.delete_one({"item_id": item_id_str})
+
+            if result.deleted_count > 0:
+                logger.info(f"Скин с item_id {item_id_str} успешно удален из кэша цен.")
+                return True
+            else:
+                return False
+        except Exception as e:
+            logger.error(f"Ошибка при удалении item_id {item_id_str} из кэша: {e}")
+            return False
+
+    def get_all_cached_items(self) -> List[Dict[str, Any]]:
+        """
+        Возвращает все записи из коллекции кэша цен.
+        """
+        try:
+            cursor = self.price_cache_collection.find({}, {"_id": 0})
+
+            all_items = list(cursor)
+
+            return all_items
+        except Exception as e:
+            logger.error(f"Ошибка при получении всех записей кэша цен: {e}")
+            return []
 
     def delete_skin(self, user_id: int, skin_id: int) -> bool:
         try:
