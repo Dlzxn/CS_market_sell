@@ -21,11 +21,8 @@ async def get_stat_api(user_id):
     time = get_timestamps_in_seconds()
 
     data_today = await market.get_sales_history(time["today_start"])
-    await asyncio.sleep(0.5)
     data_yesterday = await market.get_sales_history(time["yesterday_start"])
-    await asyncio.sleep(0.5)
     data_week = await market.get_sales_history(time["week_monday_start"], time["week_sunday_end"])
-    await asyncio.sleep(0.5)
     data_month = await market.get_sales_history(time["month_start"], time["month_end"])
 
     data_out_today = 0

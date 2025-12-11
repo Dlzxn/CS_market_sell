@@ -28,6 +28,10 @@ async def delete_skins(user_id):
                 break
         if not flag:
             stat = user_database.delete_skin(user_id, x["id"])
+            if stat:
+                logger.info(f"Скин {x["market_hash_name"]} был удаленн из бд у id {user_id}")
+            else:
+                logger.error(f"Ошибка удаления скина {x["market_hash_name"]} у id {user_id}")
 
     for x in list_skins["items"]:
         if x["item_id"] not in index_list:
