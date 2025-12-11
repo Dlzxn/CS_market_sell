@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Если API есть → показываем ТОЛЬКО информацию
             appMainBlock.classList.remove("hidden");
             document.getElementById("uid").innerText = data.user_id || "Не получен";
+            setupStatsButton(data.user_id);
         }
     });
 
@@ -68,5 +69,40 @@ function showApiInput() {
             } else alert("❗ Неверный API ключ");
         })
         .catch(() => alert("Ошибка соединения с сервером"));
+    };
+}
+const STATS_PAGE_URL = "https://salesinovbot1488.ru/stat/info";
+const statsBtn = document.getElementById("stats-btn");
+
+/**
+ * Назначает обработчик клика кнопке статистики.
+ *
+ * @param {string | null} userId ID пользователя, полученный из chrome.storage.
+ */
+function setupStatsButton(userId) {
+    if (!statsBtn) {
+        console.error("Кнопка статистики с ID 'stats-btn' не найдена.");
+        return;
+    }
+
+    // 1. Проверяем, есть ли валидный ID
+    if (!userId) {
+         statsBtn.disabled = true;
+         statsBtn.textContent = "Статистика (ID не найден)";
+         // Убедимся, что на кнопке нет обработчика, если она неактивна
+         statsBtn.onclick = null;
+         return;
+    }
+
+    // 2. Если ID есть, делаем кнопку активной и назначаем обработчик клика
+    statsBtn.disabled = false;
+    statsBtn.textContent = "Статистика Продаж 📈"; // Восстанавливаем оригинальный текст
+
+    statsBtn.onclick = () => {
+        // userId гарантированно существует и передано как аргумент
+        const url = `${STATS_PAGE_URL}?user_id=${userId}`;
+
+        // Открываем новую вкладку
+        chrome.tabs.create({ url: url });
     };
 }

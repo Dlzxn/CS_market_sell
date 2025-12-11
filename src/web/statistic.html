@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аналитика Продаж</title>
+    <link rel="stylesheet" href="/static/statistic.css?v1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+
+        <header class="dashboard-header">
+            <h1 class="header-title">Аналитика Продаж 📈</h1>
+            <div class="header-status">Последнее обновление: <span id="last-updated">Загрузка...</span></div>
+        </header>
+
+        <section class="summary-grid">
+            <div class="card total-sales-card">
+                <p class="card-label">Общая прибыль за период</p>
+                <div class="card-value" id="total-sales">0 ₽</div>
+            </div>
+
+            <div class="card average-comparison-card">
+                <p class="card-label">Сравнение со средним дневным доходом</p>
+                <div class="comparison-details">
+                    <div class="detail-item">
+                        <p>Сегодня</p>
+                        <span id="today-vs-avg" class="comparison-metric">...</span>
+                    </div>
+                    <div class="detail-item">
+                        <p>Вчера</p>
+                        <span id="yesterday-vs-avg" class="comparison-metric">...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="period-stats-grid">
+            <div class="card period-card">
+                <p class="card-label">Сегодня</p>
+                <div class="card-value" id="today-sales">0 ₽</div>
+            </div>
+            <div class="card period-card">
+                <p class="card-label">Вчера</p>
+                <div class="card-value" id="yesterday-sales">0 ₽</div>
+            </div>
+            <div class="card period-card">
+                <p class="card-label">За Неделю</p>
+                <div class="card-value" id="week-sales">0 ₽</div>
+            </div>
+            <div class="card period-card">
+                <p class="card-label">За Месяц</p>
+                <div class="card-value" id="month-sales">0 ₽</div>
+            </div>
+        </section>
+
+        <section class="chart-section card">
+            <p class="card-label">Динамика Дохода за 30 дней</p>
+            <div class="chart-canvas" id="sales-chart">
+                </div>
+        </section>
+
+    </div>
+    <script src="/static/statistic.js?v1.3"></script>
+</body>
+</html>

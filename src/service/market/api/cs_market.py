@@ -235,7 +235,7 @@ class CSMarket:
 
         return response
 
-    async def get_sales_history(self, date: str) -> dict[str, Any]:
+    async def get_sales_history(self, date: str, date_end: str = None) -> dict[str, Any]:
         """
             Summary: Получение историю продаж предметов
 
@@ -253,11 +253,16 @@ class CSMarket:
                 |-- buy - предмет был куплен
                 |-- sell - предмет был продан
         """
-
-        status, response = await self._make_request(
-            url = f'https://market.csgo.com/api/v2/history?key={self._api_key}&date={date}',
-            method = 'post'
-        )
+        if date_end is None:
+            status, response = await self._make_request(
+                url = f'https://market.csgo.com/api/v2/history?key={self._api_key}&date={date}',
+                method = 'post'
+            )
+        else:
+            status, response = await self._make_request(
+                url=f'https://market.csgo.com/api/v2/history?key={self._api_key}&date={date}&date_end={date_end}',
+                method='post'
+            )
 
         if status == 200:
             return response

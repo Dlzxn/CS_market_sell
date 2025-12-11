@@ -1,18 +1,22 @@
 from fastapi import FastAPI
 from  fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 import httpx
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.jobstores.base import JobLookupError
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime, timedelta
 
+from src.Routers import stat_router
 from src.model.DataModel import DataModel, UpdateTimeData
 from src.Routers.user_rout import user_rout
 from src.db.CRUD import user_database
 from src.service.scheduler.trader import check_user_orders, delete_skins, check_new_skins
 from src.service.logger_cfg.log import logger
+from src.Routers.stat_router import stat
 
 app = FastAPI()
+app.mount("/static", StaticFiles(directory="src/web"), name="static")
 scheduler = AsyncIOScheduler()
 
 def start_trader(user_id: int | str, interval: int | str):
@@ -94,6 +98,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.include_router(user_rout)
+app.include_router(stat)
 
 @app.get("/")
 async def root():

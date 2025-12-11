@@ -1,0 +1,148 @@
+/* Переменные для легкого изменения темы */
+:root {
+    --color-bg-dark: #1e1e3f; /* Глубокий тёмный фон */
+    --color-card-bg: #2a2a57; /* Фон карточек */
+    --color-accent: #00bcd4; /* Основной акцент (бирюзовый) */
+    --color-text-light: #e0e0f0; /* Светлый текст */
+    --color-success: #4caf50; /* Зеленый (выше среднего) */
+    --color-danger: #f44336; /* Красный (ниже среднего) */
+    --font-primary: 'Space Grotesk', sans-serif;
+}
+
+body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.5s ease;
+}
+
+/* Контейнер Дашборда */
+.dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Заголовок */
+.dashboard-header {
+    border-bottom: 2px solid var(--color-card-bg);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.header-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: 1px;
+}
+
+/* Карточки */
+.card {
+    background: var(--color-card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.card-label {
+    font-size: 0.9em;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+.card-value {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+/* Сетки для карточек */
+.summary-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Основные продажи и сравнение */
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.period-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 равных столбца */
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Сравнение со средним (average-comparison-card) */
+.comparison-details {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+
+.detail-item {
+    text-align: center;
+    position: relative;
+}
+
+.detail-item p {
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
+.comparison-metric {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+/* Цветовая индикация сравнения */
+.up {
+    color: var(--color-success);
+    /* Анимация пульсации для привлечения внимания */
+    animation: pulse-success 1.5s infinite alternate;
+}
+
+.down {
+    color: var(--color-danger);
+    /* Анимация пульсации */
+    animation: pulse-danger 1.5s infinite alternate;
+}
+
+/* График */
+.chart-section {
+    padding: 40px;
+    min-height: 400px;
+}
+
+/* Анимации */
+@keyframes pulse-success {
+    from { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.5); }
+    to { box-shadow: 0 0 10px 10px rgba(76, 175, 80, 0); }
+}
+
+@keyframes pulse-danger {
+    from { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.5); }
+    to { box-shadow: 0 0 10px 10px rgba(244, 67, 54, 0); }
+}
+
+/* Анимация загрузки (Skeleton Loader) */
+.is-loading .card-value, .is-loading .comparison-metric {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: transparent;
+    animation: loading-pulse 1.5s infinite linear;
+}
+
+@keyframes loading-pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.4; }
+}
