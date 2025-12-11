@@ -25,6 +25,7 @@ def start_trader(user_id: int | str, interval: int | str):
         logger.info(f"Trader work{user_id} removed")
     except JobLookupError:
         pass
+
     scheduler.add_job(
         check_user_orders,
         'interval',

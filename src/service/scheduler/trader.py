@@ -46,7 +46,7 @@ async def delete_skins(user_id):
 
 
 async def check_new_skins(user_id: int | str):
-    logger.info("ЗАПУЩЕН ПРОСМОТР ДЛЯ АЙДИ:" + user_id)
+    logger.info("ЗАПУЩЕН ПРОСМОТР ДЛЯ АЙДИ: " + str(user_id))
     if user_id == 0:
         return 0
     user = user_database.get_info_by_id(user_id)
@@ -102,6 +102,12 @@ async def check_user_orders(user_id: int | str) -> None:
         except KeyError as e:
             logger.error(f"Не найден ключ success, данные выглядят так: {list_items}")
 
+        try:
+            if list_items["items"]:
+                pass
+        except KeyError as e:
+            return 0
+
         for item in list_items["items"]:
             is_find = False
             for x in user["skins"]:
@@ -149,10 +155,15 @@ async def check_user_orders(user_id: int | str) -> None:
                 case 1:
                     pass
 
-            status = await market.update_price_item(item_id=item["item_id"], new_price_item=price-1)
-            if status["status"]:
-                logger.info(f"Цена на предмет {skin_hash} изменена на {price-1}")
-            else:
+            status = await market.update_price_item_mhn(market_hash_name=skin_hash, new_price_item=price-1)
+            print(status)
+            try:
+                if status["success"]:
+                    logger.info(f"Цена на предмет {skin_hash} изменена на {price-1}")
+                else:
+                    logger.error(f"Ошибка изменения цены для скина"
+                                 f" с id {item["item_id"]} по прайсу {price-1}")
+            except Exception as e:
                 logger.error(f"Ошибка изменения цены: {status["message"]} для скина"
-                             f" с id {item["item_id"]} по прайсу {price-1}")
+                                 f" с id {item["item_id"]} по прайсу {price-1}")
         return None
