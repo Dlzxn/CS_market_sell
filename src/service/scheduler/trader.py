@@ -46,7 +46,7 @@ async def delete_skins(user_id):
 
 
 async def check_new_skins(user_id: int | str):
-    print("ЗАПУЩЕН ПРОСМОТР ДЛЯ АЙДИ:", user_id)
+    logger.info("ЗАПУЩЕН ПРОСМОТР ДЛЯ АЙДИ:", user_id)
     if user_id == 0:
         return 0
     user = user_database.get_info_by_id(user_id)
@@ -58,7 +58,7 @@ async def check_new_skins(user_id: int | str):
         logger.error(f"Ошибка получения инвентаря у id {user_id}")
         print(list_for_sale)
         return 0
-    print("Сервер ответил на соединение-инвентарь получен")
+    logger.info("Сервер ответил на соединение-инвентарь получен")
     all_id = [x["id"] for x in user["skins"]]
     for x in list_for_sale["items"]:
         price = 0
@@ -95,10 +95,12 @@ async def check_user_orders(user_id: int | str) -> None:
             skin["market_hash_name"]: int(float(skin["price"]) * 100)
             for skin in info["items"]
         }
-
-        if not list_items["success"]:
-            logger.error(f"Ответ от сервера не получен | запрос всех item на продажу для айди {user_id}")
-            return 0
+        try:
+            if not list_items["success"]:
+                logger.error(f"Ответ от сервера не получен | запрос всех item на продажу для айди {user_id}")
+                return 0
+        except KeyError as e:
+            logger.error(f"Не найден ключ success, данные выглядят так: {list_items}")
 
         for item in list_items["items"]:
             is_find = False
@@ -151,4 +153,6 @@ async def check_user_orders(user_id: int | str) -> None:
             if status["status"]:
                 logger.info(f"Цена на предмет {skin_hash} изменена на {price-1}")
             else:
-                logger.error(f"Ошибка изменения цены: {status["message"]}")
+                logger.error(f"Ошибка изменения цены: {status["message"]} для скина"
+                             f" с id {item["item_id"]} по прайсу {price-1}")
+        return None

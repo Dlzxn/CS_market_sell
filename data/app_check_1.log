@@ -1,0 +1,32 @@
+Попытка подключения....
+2025-12-11 14:33:48 | INFO | market | Успешное подключение к MongoDB.
+Процесс с айди  1
+APScheduler запущен и готов к работе.
+ЗАПУЩЕН ПРОСМОТР ДЛЯ АЙДИ: 1
+Сервер ответил на соединение-инвентарь получен
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/alex/dev/python/CS_market_sell/app_check.py", line 41, in main
+    await asyncio.sleep(1)
+  File "/usr/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/dev/python/CS_market_sell/app_check.py", line 48, in <module>
+    asyncio.run(main())
+    ~~~~~~~~~~~^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt

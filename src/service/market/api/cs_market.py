@@ -192,7 +192,7 @@ class CSMarket:
 
             return {
                 'status': False,
-                'message': str(response['error']) + str(new_price_item)
+                'message': str(response['error']) + " " +str(new_price_item) + "item_id: " + str(item_id)
             }
 
         return response

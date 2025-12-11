@@ -1,0 +1,980 @@
+Попытка подключения....
+2025-12-11 14:33:48 | INFO | market | Успешное подключение к MongoDB.
+APScheduler запущен и готов к работе.
+{'user_id': 1, 'api_key': 'AhA1ai90swp021wMaeJSnkN4kifY9yT', 'time': 50, 'skins': [{'id': 8570087609, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8568388169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565281799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565281609, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565281109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565280949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565280649, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565279989, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565279189, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565278539, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565278369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565278249, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565278059, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565277369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565276419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565276209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565276079, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565275999, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565275809, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565273789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565273479, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565273309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565273009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565272549, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565271779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565271619, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565270909, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565269849, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565269319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565268999, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565268809, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565268089, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565267859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565267669, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565267379, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565267049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565266859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565266709, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565266449, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565265899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565265459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565264909, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565264379, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565263789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565263449, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565263129, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565262719, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565262229, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565255459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565255059, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565254779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565254179, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565253749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565250369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565250109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565249899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565249759, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565249049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565247969, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565247589, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565247009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565242499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565241749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565241479, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565240559, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565240329, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565239599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565239319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565238259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565237889, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565237619, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565234109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565233239, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565232559, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565229379, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565228609, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565228169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565227029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565226879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565226659, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565226149, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565225839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565224799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565224169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565223939, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565223679, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565221209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565220039, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565218839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565217949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565217409, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565216669, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565216319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565215649, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565215369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565214749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565214219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565204529, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565203649, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565203139, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565201829, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565201629, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565201469, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565200939, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565200759, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565199379, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565199049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565197579, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565197299, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565197119, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565196229, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565195879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565194929, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565194269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565193839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565192539, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565192269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565186659, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565186199, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565185969, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565180559, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565179019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565178389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565177229, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565176879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565176439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565172439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565172009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565170999, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565170499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565170209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565169749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565168529, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565167199, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565166029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565160759, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565160479, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565160259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565157549, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565157299, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565157179, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565157019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565156789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565156649, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565155779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565155019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565149149, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565148789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565147569, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565137189, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565136869, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565135749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565135359, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565130859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565130339, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565130059, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565129679, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565052409, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565048419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565045439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565031079, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565029919, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565028789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565028159, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565026459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565026229, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565026049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565025509, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565024839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565024329, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565024019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565020959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565020539, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565020209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565019719, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565019219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565003919, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565002239, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565000599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564999979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564997839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564996859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564995779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564994379, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564992639, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564991979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564991439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564990149, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564988409, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564986419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564975369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564972709, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564971899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564970679, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564968609, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564965599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564964649, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564962829, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564961899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564961389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564961009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564960329, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564959739, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564959489, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564959179, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564958229, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564957359, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564955469, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564955019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564953739, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564953219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564952169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564951079, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564950279, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564948749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564947699, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564947199, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564946499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564945599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564945139, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564943569, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564942219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564940879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564940409, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564939959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564939139, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564938309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564937599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564935519, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564934589, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564932369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564929749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564929319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564928969, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564927599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564926289, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564925789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564916469, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564914929, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564913769, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564913479, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564913319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564913069, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564912609, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564912019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564906809, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564905089, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564902989, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564901419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564899629, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564898489, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564897899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564896979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564885429, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564883499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564882369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564881689, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564881039, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564879169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564878219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564876269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564874219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564873269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564871029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564865319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564863109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564859179, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564857089, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564840459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564834669, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564832669, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564832109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564831619, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564831279, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564830279, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564828689, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564824889, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564823559, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564821689, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564820479, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564819129, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564816439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564814159, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564813719, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564813329, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564813109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564812279, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564810909, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564808939, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564808539, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564808019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564799299, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564798679, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564796459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564795779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564794879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564792739, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564792129, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564791219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564790219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564784769, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564782719, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564781899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564780589, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564778959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564776239, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564775199, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564774309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564773389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564772029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564770439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564768499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564767829, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564767289, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564766499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564764729, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564763969, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564762719, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564760859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564759749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564758569, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564758029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564757369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564755959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564755419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564754979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564753949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564751979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564750549, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564750059, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564749309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564748009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564747129, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564745979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564745389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564744129, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564743499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564701019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564684219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564682949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564675399, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564674459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564674089, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564673799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564672989, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564672319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564671659, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564671029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564669769, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564669399, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564668799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564659959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564659449, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564651799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564650219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564649619, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564646499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564644769, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564644519, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564643169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564642759, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564642279, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564642049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564641309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564639679, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564635909, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564635419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564635259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564634839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564631809, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564621349, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564620109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564613259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564612599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564612269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564611049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564609269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564608959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564607839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564607309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564606949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564606599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564605149, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564604519, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564602859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564601419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564600779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564600249, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564598749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564588299, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564587419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564586709, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564586199, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564585019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564584319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564583829, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564583459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564582019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564581429, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564580839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564579389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564578259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564577269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564576449, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564575469, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564574849, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564568739, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564566949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564566419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564566019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564565659, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564564829, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564563989, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564560389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564559079, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564557929, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564556589, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564556209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564555359, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564554399, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564551879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564551309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564550259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564549439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564545799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564543169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564539489, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564537869, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564536209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564535329, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564523529, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564521689, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564507909, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564507489, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564507109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564506559, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564504009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564502589, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 48197074116, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}]}
+Получены данные с бд о пользователи с айди: 1
+2025-12-11 14:33:53 | INFO | market | Скин с ID 48197074116 был удален из базы данных у пользователя 1.
+Job "delete_skins (trigger: interval[0:03:00], next run at: 2025-12-11 14:36:49 MSK)" raised an exception
+Traceback (most recent call last):
+  File "/home/alex/dev/python/CS_market_sell/.venv/lib/python3.13/site-packages/apscheduler/executors/base.py", line 181, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/dev/python/CS_market_sell/src/service/scheduler/trader.py", line 32, in delete_skins
+    logger.info(f"Скин {x["market_hash_name"]} был удаленн из бд у id {user_id}")
+                        ~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'market_hash_name'
+{'user_id': 1, 'api_key': 'AhA1ai90swp021wMaeJSnkN4kifY9yT', 'time': 50, 'skins': [{'id': 8570087609, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8568388169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565281799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565281609, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565281109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565280949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565280649, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565279989, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565279189, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565278539, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565278369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565278249, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565278059, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565277369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565276419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565276209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565276079, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565275999, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565275809, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565273789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565273479, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565273309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565273009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565272549, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565271779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565271619, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565270909, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565269849, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565269319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565268999, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565268809, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565268089, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565267859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565267669, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565267379, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565267049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565266859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565266709, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565266449, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565265899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565265459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565264909, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565264379, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565263789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565263449, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565263129, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565262719, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565262229, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565255459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565255059, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565254779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565254179, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565253749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565250369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565250109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565249899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565249759, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565249049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565247969, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565247589, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565247009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565242499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565241749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565241479, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565240559, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565240329, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565239599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565239319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565238259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565237889, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565237619, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565234109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565233239, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565232559, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565229379, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565228609, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565228169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565227029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565226879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565226659, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565226149, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565225839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565224799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565224169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565223939, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565223679, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565221209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565220039, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565218839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565217949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565217409, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565216669, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565216319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565215649, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565215369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565214749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565214219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565204529, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565203649, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565203139, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565201829, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565201629, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565201469, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565200939, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565200759, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565199379, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565199049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565197579, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565197299, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565197119, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565196229, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565195879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565194929, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565194269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565193839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565192539, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565192269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565186659, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565186199, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565185969, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565180559, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565179019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565178389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565177229, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565176879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565176439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565172439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565172009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565170999, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565170499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565170209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565169749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565168529, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565167199, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565166029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565160759, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565160479, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565160259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565157549, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565157299, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565157179, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565157019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565156789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565156649, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565155779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565155019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565149149, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565148789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565147569, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565137189, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565136869, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565135749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565135359, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565130859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565130339, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565130059, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565129679, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565052409, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565048419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565045439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565031079, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565029919, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565028789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565028159, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565026459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565026229, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565026049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565025509, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565024839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565024329, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565024019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565020959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565020539, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565020209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565019719, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565019219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565003919, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565002239, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565000599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564999979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564997839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564996859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564995779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564994379, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564992639, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564991979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564991439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564990149, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564988409, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564986419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564975369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564972709, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564971899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564970679, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564968609, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564965599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564964649, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564962829, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564961899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564961389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564961009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564960329, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564959739, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564959489, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564959179, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564958229, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564957359, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564955469, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564955019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564953739, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564953219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564952169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564951079, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564950279, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564948749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564947699, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564947199, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564946499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564945599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564945139, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564943569, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564942219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564940879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564940409, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564939959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564939139, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564938309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564937599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564935519, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564934589, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564932369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564929749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564929319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564928969, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564927599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564926289, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564925789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564916469, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564914929, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564913769, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564913479, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564913319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564913069, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564912609, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564912019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564906809, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564905089, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564902989, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564901419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564899629, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564898489, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564897899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564896979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564885429, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564883499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564882369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564881689, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564881039, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564879169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564878219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564876269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564874219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564873269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564871029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564865319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564863109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564859179, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564857089, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564840459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564834669, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564832669, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564832109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564831619, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564831279, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564830279, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564828689, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564824889, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564823559, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564821689, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564820479, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564819129, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564816439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564814159, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564813719, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564813329, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564813109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564812279, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564810909, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564808939, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564808539, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564808019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564799299, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564798679, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564796459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564795779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564794879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564792739, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564792129, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564791219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564790219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564784769, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564782719, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564781899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564780589, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564778959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564776239, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564775199, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564774309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564773389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564772029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564770439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564768499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564767829, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564767289, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564766499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564764729, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564763969, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564762719, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564760859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564759749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564758569, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564758029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564757369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564755959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564755419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564754979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564753949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564751979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564750549, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564750059, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564749309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564748009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564747129, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564745979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564745389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564744129, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564743499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564701019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564684219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564682949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564675399, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564674459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564674089, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564673799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564672989, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564672319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564671659, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564671029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564669769, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564669399, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564668799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564659959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564659449, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564651799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564650219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564649619, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564646499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564644769, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564644519, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564643169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564642759, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564642279, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564642049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564641309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564639679, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564635909, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564635419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564635259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564634839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564631809, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564621349, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564620109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564613259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564612599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564612269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564611049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564609269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564608959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564607839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564607309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564606949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564606599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564605149, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564604519, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564602859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564601419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564600779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564600249, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564598749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564588299, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564587419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564586709, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564586199, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564585019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564584319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564583829, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564583459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564582019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564581429, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564580839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564579389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564578259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564577269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564576449, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564575469, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564574849, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564568739, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564566949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564566419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564566019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564565659, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564564829, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564563989, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564560389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564559079, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564557929, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564556589, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564556209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564555359, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564554399, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564551879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564551309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564550259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564549439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564545799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564543169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564539489, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564537869, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564536209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564535329, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564523529, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564521689, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564507909, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564507489, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564507109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564506559, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564504009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564502589, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}]}
+Получены данные с бд о пользователи с айди: 1
+2025-12-11 14:36:51 | INFO | market | Скин 8575479149 добавлен к пользователю 1.
+2025-12-11 14:36:51 | INFO | market | Скин Souvenir MP7 | Tall Grass (Field-Tested) добавлен в бд
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+2025-12-11 14:36:51 | INFO | market | Скин уже есть в базе данных
+2025-12-11 14:36:51 | ERROR | market | При выставлении скина случилась ошибка | Ошибка базы данных
+{'user_id': 1, 'api_key': 'AhA1ai90swp021wMaeJSnkN4kifY9yT', 'time': 50, 'skins': [{'id': 8570087609, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8568388169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565281799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565281609, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565281109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565280949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565280649, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565279989, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565279189, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565278539, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565278369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565278249, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565278059, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565277369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565276419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565276209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565276079, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565275999, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565275809, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565273789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565273479, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565273309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565273009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565272549, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565271779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565271619, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565270909, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565269849, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565269319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565268999, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565268809, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565268089, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565267859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565267669, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565267379, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565267049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565266859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565266709, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565266449, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565265899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565265459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565264909, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565264379, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565263789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565263449, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565263129, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565262719, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565262229, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565255459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565255059, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565254779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565254179, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565253749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565250369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565250109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565249899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565249759, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565249049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565247969, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565247589, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565247009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565242499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565241749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565241479, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565240559, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565240329, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565239599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565239319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565238259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565237889, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565237619, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565234109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565233239, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565232559, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565229379, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565228609, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565228169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565227029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565226879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565226659, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565226149, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565225839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565224799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565224169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565223939, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565223679, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565221209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565220039, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565218839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565217949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565217409, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565216669, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565216319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565215649, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565215369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565214749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565214219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565204529, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565203649, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565203139, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565201829, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565201629, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565201469, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565200939, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565200759, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565199379, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565199049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565197579, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565197299, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565197119, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565196229, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565195879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565194929, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565194269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565193839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565192539, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565192269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565186659, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565186199, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565185969, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565180559, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565179019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565178389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565177229, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565176879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565176439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565172439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565172009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565170999, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565170499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565170209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565169749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565168529, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565167199, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565166029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565160759, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565160479, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565160259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565157549, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565157299, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565157179, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565157019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565156789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565156649, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565155779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565155019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565149149, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565148789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565147569, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565137189, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565136869, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565135749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565135359, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565130859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565130339, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565130059, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565129679, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565052409, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565048419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565045439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565031079, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565029919, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565028789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565028159, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565026459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565026229, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565026049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565025509, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565024839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565024329, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565024019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565020959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565020539, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565020209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565019719, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565019219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565003919, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565002239, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8565000599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564999979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564997839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564996859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564995779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564994379, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564992639, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564991979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564991439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564990149, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564988409, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564986419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564975369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564972709, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564971899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564970679, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564968609, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564965599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564964649, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564962829, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564961899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564961389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564961009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564960329, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564959739, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564959489, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564959179, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564958229, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564957359, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564955469, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564955019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564953739, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564953219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564952169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564951079, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564950279, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564948749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564947699, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564947199, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564946499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564945599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564945139, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564943569, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564942219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564940879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564940409, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564939959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564939139, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564938309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564937599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564935519, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564934589, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564932369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564929749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564929319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564928969, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564927599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564926289, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564925789, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564916469, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564914929, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564913769, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564913479, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564913319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564913069, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564912609, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564912019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564906809, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564905089, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564902989, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564901419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564899629, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564898489, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564897899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564896979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564885429, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564883499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564882369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564881689, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564881039, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564879169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564878219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564876269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564874219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564873269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564871029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564865319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564863109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564859179, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564857089, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564840459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564834669, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564832669, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564832109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564831619, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564831279, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564830279, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564828689, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564824889, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564823559, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564821689, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564820479, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564819129, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564816439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564814159, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564813719, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564813329, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564813109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564812279, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564810909, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564808939, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564808539, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564808019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564799299, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564798679, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564796459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564795779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564794879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564792739, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564792129, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564791219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564790219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564784769, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564782719, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564781899, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564780589, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564778959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564776239, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564775199, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564774309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564773389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564772029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564770439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564768499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564767829, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564767289, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564766499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564764729, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564763969, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564762719, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564760859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564759749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564758569, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564758029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564757369, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564755959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564755419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564754979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564753949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564751979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564750549, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564750059, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564749309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564748009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564747129, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564745979, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564745389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564744129, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564743499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564701019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564684219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564682949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564675399, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564674459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564674089, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564673799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564672989, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564672319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564671659, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564671029, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564669769, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564669399, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564668799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564659959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564659449, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564651799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564650219, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564649619, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564646499, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564644769, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564644519, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564643169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564642759, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564642279, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564642049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564641309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564639679, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564635909, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564635419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564635259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564634839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564631809, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564621349, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564620109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564613259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564612599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564612269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564611049, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564609269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564608959, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564607839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564607309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564606949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564606599, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564605149, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564604519, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564602859, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564601419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564600779, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564600249, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564598749, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564588299, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564587419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564586709, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564586199, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564585019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564584319, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564583829, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564583459, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564582019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564581429, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564580839, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564579389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564578259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564577269, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564576449, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564575469, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564574849, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564568739, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564566949, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564566419, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564566019, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564565659, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564564829, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564563989, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564560389, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564559079, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564557929, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564556589, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564556209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564555359, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564554399, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564551879, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564551309, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564550259, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564549439, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564545799, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564543169, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564539489, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564537869, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564536209, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564535329, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564523529, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564521689, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564507909, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564507489, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564507109, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564506559, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564504009, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8564502589, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}, {'id': 8575479149, 'currently_price': None, 'min_price': 0.0, 'auto_reprice': True}]}
+Получены данные с бд о пользователи с айди: 1
+Job "delete_skins (trigger: interval[0:03:00], next run at: 2025-12-11 14:42:49 MSK)" raised an exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/alex/dev/python/CS_market_sell/app_del.py", line 41, in main
+    await asyncio.sleep(1)
+  File "/usr/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/dev/python/CS_market_sell/.venv/lib/python3.13/site-packages/apscheduler/executors/base.py", line 181, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/dev/python/CS_market_sell/src/service/scheduler/trader.py", line 20, in delete_skins
+    list_skins = await market.get_items_for_sale()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/dev/python/CS_market_sell/src/service/market/api/cs_market.py", line 112, in get_items_for_sale
+    status, response = await self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/home/alex/dev/python/CS_market_sell/src/service/market/api/cs_market.py", line 32, in _make_request
+    async with session.request(url=url, method=method) as response:
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/dev/python/CS_market_sell/.venv/lib/python3.13/site-packages/aiohttp/client.py", line 1510, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/alex/dev/python/CS_market_sell/.venv/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alex/dev/python/CS_market_sell/.venv/lib/python3.13/site-packages/aiohttp/client.py", line 757, in _connect_and_send_request
+    await resp.start(conn)
+  File "/home/alex/dev/python/CS_market_sell/.venv/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 539, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/dev/python/CS_market_sell/.venv/lib/python3.13/site-packages/aiohttp/streams.py", line 680, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/alex/dev/python/CS_market_sell/app_del.py", line 41, in main
+    await asyncio.sleep(1)
+  File "/usr/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/dev/python/CS_market_sell/app_del.py", line 48, in <module>
+    asyncio.run(main())
+    ~~~~~~~~~~~^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt

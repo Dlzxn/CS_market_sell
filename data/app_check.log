@@ -1,0 +1,115 @@
+Процесс с айди  3
+APScheduler запущен и готов к работе.
+ЗАПУЩЕН ПРОСМОТР ДЛЯ АЙДИ: 3
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.  File "/usr/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_com  File "/usr/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._l  File "/usr/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/alex/dev/python/CS_market_sell/src/app_check.py", line 41
+During handling   File "/home/alex/dev/python/CS_market_sell/src/app_check.py", line 48, in <module>
+     File "/home/alex/dev/python/CS_market_sell/src/app_check.py", line 48, in <module>
+    asyncio.run(  File "/home/alex/dev/python/CS  File "/usr/lib/python3.13/asyncio/runners.py", lin  File "/home/alex/dev/python/CS_market_sell/src/app_check.py", line 48, in <module>
+    asyncio.run(main())
+    ~~~~~~~~~~~^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+in Pyjamas | 2020 RMR выставлен за 77.0 | id_user: f4
+2025-12-09 18:12:10 | INFO | market | User updated skins | update_skins function
+2025-12-09 18:12:10 | INFO | market | Скин fSticker | Ninjas in Pyjamas | 2020 RMR выставлен за 77.0 | id_user: f4
+2025-12-09 18:12:12 | INFO | market | User updated skins | update_skins function
+2025-12-09 18:12:12 | INFO | market | Скин fSticker | Ninjas in Pyjamas | 2020 RMR выставлен за 77.0 | id_user: f4
+2025-12-09 18:12:18 | INFO | market | User updated skins | update_skins function
+2025-12-09 18:12:18 | INFO | market | Скин fSticker | Ninjas in Pyjamas | 2020 RMR выставлен за 77.0 | id_user: f4
+Job "check_new_skins (trigger: interval[0:30:00], next run at: 2025-12-09 18:41:31 MSK)" raised an exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/alex/dev/python/CS_market_sell/src/app_check.py", line 41, in main
+    await asyncio.sleep(1)
+  File "/usr/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/dev/python/CS_market_sell/.venv/lib/python3.13/site-packages/apscheduler/executors/base.py", line 181, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/dev/python/CS_market_sell/src/service/scheduler/trader.py", line 65, in check_new_skins
+    status = await market.put_item_up_sale(x["id"], float(item["price"])*100 - 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/dev/python/CS_market_sell/src/service/market/api/cs_market.py", line 140, in put_item_up_sale
+    status, response = await self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/home/alex/dev/python/CS_market_sell/src/service/market/api/cs_market.py", line 32, in _make_request
+    async with session.request(url=url, method=method) as response:
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/dev/python/CS_market_sell/.venv/lib/python3.13/site-packages/aiohttp/client.py", line 1510, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/alex/dev/python/CS_market_sell/.venv/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alex/dev/python/CS_market_sell/.venv/lib/python3.13/site-packages/aiohttp/client.py", line 757, in _connect_and_send_request
+    await resp.start(conn)
+  File "/home/alex/dev/python/CS_market_sell/.venv/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 539, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/dev/python/CS_market_sell/.venv/lib/python3.13/site-packages/aiohttp/streams.py", line 680, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/alex/dev/python/CS_market_sell/src/app_check.py", line 41, in main
+    await asyncio.sleep(1)
+  File "/usr/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/dev/python/CS_market_sell/src/app_check.py", line 48, in <module>
+    asyncio.run(main())
+    ~~~~~~~~~~~^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
