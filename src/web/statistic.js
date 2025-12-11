@@ -137,9 +137,6 @@ function renderStatistics() {
     const userId = urlParams.get('user_id');
 
     // 3. Выводим ID алертом (по вашему запросу)
-    if (userId) {
-        alert("Получен ID пользователя: " + userId);
-    }
 
     if (!userId) {
         alert("Ошибка: ID пользователя не найден в URL-параметрах.");

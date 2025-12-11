@@ -79,64 +79,72 @@ async def check_new_skins(user_id: int | str):
 
 
 async def check_user_orders(user_id: int | str) -> None:
-    if user_id == 0:
-        return 0
-    time_start = time.time()
     user = user_database.get_info_by_id(user_id)
     if user is None:
-        pass
+        logger.info(f"Пользователь с id {user_id} не найден")
+        return 0
     else:
         market = CSMarket(user["api_key"])
-        list = await market.get_items_for_sale()
-        try:
-            stat = list["status"]
-            logger.error(f"Ошибка обращения get_items_for_sale() у айди {user_id}, message: {list["message"]}")
+        list_items = await market.get_items_for_sale()
+        info = await market.list_best_prices()
+        best_prices_map = {
+            skin["market_hash_name"]: int(float(skin["price"]) * 100)
+            for skin in info["items"]
+        }
+
+        if not list_items["success"]:
+            logger.error(f"Ответ от сервера не получен | запрос всех item на продажу для айди {user_id}")
             return 0
-        except KeyError:
-            pass
 
-        for x in user["skins"]:
-            if not x["auto_reprice"]:
-                logger.info("Данный скин не торгуется")
+        for item in list_items["items"]:
+            is_find = False
+            for x in user["skins"]:
+                if str(x["id"]) == str(item["item_id"]):
+                    is_find = True
+                    bd_skin = x
+                    break
+
+            if is_find:
+                if not bd_skin["auto_reprice"]:
+                    logger.info(f"Данный скин не торгуется")
+                    continue
+
+            skin_hash = item["market_hash_name"]
+            if int(item["position"]) == 1:
+                logger.info(f"Позиция предмета {skin_hash} занимает 1 место")
                 continue
-            for y in list["items"]:
-                if str(y["item_id"]) == str(x["id"]):
-                    hash_name = y["market_hash_name"]
-                    if str(y["position"]) == "1":
-                        logger.info("Позиция предмета занимает 1 место")
-                        break
-                    else:
-                        info = await market.list_best_prices()
-                        lots = info["items"]
-                        price = y["price"]
-                        flag = False
-                        print(f"Длина лотов: {len(lots)}")
-                        for lot in lots:
-                            if str(lot["market_hash_name"]) == hash_name:
-                                price = float(lot["price"])*100 - 1
-                                logger.info(f"Нашли цену в {price}")
-                                flag = True
-                                break
-                        status = checking_item_price(user_id, y["item_id"], price)
-                        match status:
-                            case 0:
-                                price += 2
-                            case 1:
-                                pass
-                        flag_1 = False
-                        if price < x["min_price"]:
-                            price = x["min_price"]
-                        print(f"Айди:{y["item_id"]}")
-                        print(price, y["price"]*100)
-                        if price != y["price"]*100:
-                            status = await market.update_price_item(item_id=y["item_id"], new_price_item=price)
-                            if status["status"]:
-                                logger.info(f"Цена на предмет {hash_name} изменена на {price}")
-                            else:
-                                logger.error(f"Ошибка изменения цены: {status["message"]}")
-                            break
-                        else:
-                            logger.info(f"Цена на предмет {hash_name} не изменена")
-                            break
 
-    print(f"Выполнено за : {time.time() - time_start}")
+            flag = False
+            try:
+                price_best = best_prices_map[skin_hash]
+                price = int(float(price_best)*100)
+                flag = True
+
+            except KeyError:
+                logger.error(f"Ошибка нахождения скина {skin_hash} в лучших ценах")
+
+            except Exception as e:
+                logger.error(e)
+
+            if not flag:
+                logger.info("Скин не найден среди всех items")
+                continue
+
+            print(f"Цены на скин {skin_hash}: {price} | {int(float(item["price"])*100)}")
+            if price == int(float(item["price"])*100):
+                logger.info(f"Скин {skin_hash} стоит по актуальному прайсу")
+                continue
+
+            status = checking_item_price(user_id, item["item_id"], price)
+            match status:
+                case 0:
+                    logger.info(f"Защита от демпинга для скина {skin_hash}, актуальная цена станет {price + 1}")
+                    price += 2
+                case 1:
+                    pass
+
+            status = await market.update_price_item(item_id=item["item_id"], new_price_item=price-1)
+            if status["status"]:
+                logger.info(f"Цена на предмет {skin_hash} изменена на {price-1}")
+            else:
+                logger.error(f"Ошибка изменения цены: {status["message"]}")

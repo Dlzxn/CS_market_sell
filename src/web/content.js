@@ -59,7 +59,7 @@ function initEnhancer() {
             <h2 style="margin:0 0 12px; text-align:center;">AutoPrice Settings</h2>
 
             <label style="display:flex;align-items:center;margin-bottom:10px;">
-                <input type="checkbox" id="enable_${i}" style="margin-right:8px;">
+                <input type="checkbox" id="enable_${i}" style="margin-right:8px;" checked>
                 Включить авторепрайс
             </label>
 

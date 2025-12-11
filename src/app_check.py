@@ -24,7 +24,7 @@ def startup_event(user_id):
     scheduler.add_job(
             check_new_skins,
             'interval',
-            seconds=1800,
+            seconds=300,
             args=[user_id],
             id="check_new_skins: " + str(user_id),
             max_instances=1,
