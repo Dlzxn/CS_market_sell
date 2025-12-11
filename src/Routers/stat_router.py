@@ -16,7 +16,6 @@ async def get_stat_info(user_id):
     return FileResponse("src/web/statistic.html")
 
 
-
 def _get_start_of_day_timestamp(days_ago: int = 0) -> int:
     now = datetime.now(timezone.utc)
     target_date = now.date() - timedelta(days=days_ago)
@@ -41,7 +40,7 @@ async def get_stat_api(user_id):
     if not sales_history_response["success"]:
         return {"error": "Failed to fetch sales history"}
 
-    all_sales = sales_history_response.get("items", [])
+    all_sales = sales_history_response.get("data", [])
 
     today_start_ts = _get_start_of_day_timestamp(0)
     yesterday_start_ts = _get_start_of_day_timestamp(1)
@@ -55,8 +54,14 @@ async def get_stat_api(user_id):
     sales_week = []
 
     for item in all_sales:
-        item_time = item.get("time")
-        if item_time is None or not isinstance(item_time, (int, float)):
+        item_time_str = item.get("time")
+        if item_time_str is None:
+            continue
+
+        try:
+            item_time = int(item_time_str)
+        except ValueError:
+            logger.warning(f"Не удалось конвертировать время в число: {item_time_str}")
             continue
 
         if item_time >= today_start_ts:
@@ -68,9 +73,9 @@ async def get_stat_api(user_id):
         if item_time >= week_start_ts:
             sales_week.append(item)
 
-    data_out_today = check_money({"success": True, "items": sales_today})
-    data_out_yesterday = check_money({"success": True, "items": sales_yesterday})
-    data_out_week = check_money({"success": True, "items": sales_week})
+    data_out_today = check_money({"success": True, "data": sales_today})
+    data_out_yesterday = check_money({"success": True, "data": sales_yesterday})
+    data_out_week = check_money({"success": True, "data": sales_week})
     data_out_month = check_money(sales_history_response)
 
     return {

@@ -1,19 +1,28 @@
 from datetime import datetime, timedelta, date
 
 
-def check_money(data):
-    # Проверяем, что запрос успешен и что есть ключ "items"
-    if not data.get("success") or not isinstance(data.get("items"), list):
+def check_money(data: dict) -> float:
+    if not data.get("success") or not isinstance(data.get("data"), list):
         return 0.0
 
     return_sum = 0.0
 
-    for item in data["items"]:
-        price_cents = item.get("price")
+    for item in data["data"]:
+        event = item.get("event")
+        amount_str = None
 
-        if price_cents is not None:
-            return_sum += (price_cents / 100.0)
+        if event == "buy":
+            amount_str = item.get("paid")
 
+        elif event == "sell":
+            amount_str = item.get("received")
+
+        if amount_str is not None:
+            try:
+                return_sum += (float(amount_str) / 100.0)
+            except ValueError:
+                print(f"Неверный формат суммы: {amount_str}")
+                continue
     return round(return_sum, 2)
 
 
