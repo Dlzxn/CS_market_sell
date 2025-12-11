@@ -123,7 +123,7 @@ async def check_user_orders(user_id: int | str) -> None:
             flag = False
             try:
                 price_best = best_prices_map[skin_hash]
-                price = int(float(price_best)*100)
+                price = price_best
                 flag = True
 
             except KeyError:
@@ -137,7 +137,7 @@ async def check_user_orders(user_id: int | str) -> None:
                 continue
 
             print(f"Цены на скин {skin_hash}: {price} | {int(float(item["price"])*100)}")
-            if price == int(float(item["price"])*100):
+            if price == item["price"]:
                 logger.info(f"Скин {skin_hash} стоит по актуальному прайсу")
                 continue
 
