@@ -181,7 +181,7 @@ class CSMarket:
             url=f'https://market.csgo.com/api/v2/set-price?key={self._api_key}&item_id={item_id}&price={int(new_price_item)}&cur={currency}',
             method='post'
         )
-
+        print(f'https://market.csgo.com/api/v2/set-price?key={self._api_key}&item_id={item_id}&price={int(new_price_item)}&cur={currency}')
         if status == 200:
 
             if response['success']:
