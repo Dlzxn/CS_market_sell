@@ -24,12 +24,12 @@ class CSMarket:
                 await asyncio.sleep(self._min_delay - elapsed)
             self._last_request_time = time.time()
 
-    async def _make_request(self, url: str, method: str):
+    async def _make_request(self, url: str, method: str, **params):
 
         await self._limit_rate()
 
         async with aiohttp.ClientSession() as session:
-            async with session.request(url=url, method=method) as response:
+            async with session.request(url=url, method=method, **params) as response:
                 response_status = response.status
 
                 if response_status == 200:
@@ -263,6 +263,48 @@ class CSMarket:
                 url=f'https://market.csgo.com/api/v2/history?key={self._api_key}&date={date}&date_end={date_end}',
                 method='post'
             )
+
+        if status == 200:
+            return response
+
+        return response
+
+    async def update_price_item_mhn(self, market_hash_name: str, new_price_item: int | float, currency: str = 'RUB'):
+        """
+            Summary: Обновление цен по названию товара
+            Parameters:
+                market_hash_name: str
+                new_price_item: int | float
+            Return:
+                {
+                    "success": true,
+                    "items": [
+                        {
+                            "success": true,
+                            "item_id": 5712824543,
+                            "price": 2600000,
+                            "currency": "RUB"
+                        },
+                        {
+                            "success": true,
+                            "item_id": 5712824544,
+                            "price": 2600000,
+                            "currency": "RUB"
+                        }
+                    ]
+                }
+        """
+
+        item = {
+            'market_hash_name': market_hash_name,
+            'price': new_price_item
+        }
+
+        status, response = await self._make_request(
+            url = f'https://market.csgo.com/api/v2/mass-set-price-mhn?key={self._api_key}&cur={currency}',
+            method = 'post',
+            json=item
+        )
 
         if status == 200:
             return response
