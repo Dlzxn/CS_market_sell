@@ -89,7 +89,7 @@ class UserBD:
             except DuplicateKeyError:
                 logger.warning(f"Race Condition: item_id {item_id_str} уже был вставлен.")
 
-            return 0
+            return 1
 
     def delete_cached_item(self, item_id: Union[int, str]) -> bool:
         """
