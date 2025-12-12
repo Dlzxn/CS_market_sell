@@ -62,24 +62,6 @@ def startup_event():
             id=str(user_id),
             max_instances=1
         )
-        scheduler.add_job(
-            check_new_skins,
-            'interval',
-            seconds=600,
-            args=[user_id],
-            id="check_new_skins: " + str(user_id),
-            max_instances=1,
-            next_run_time=datetime.now() + timedelta(seconds=120)
-        )
-        scheduler.add_job(
-            delete_skins,
-            'interval',
-            seconds=3600,
-            args=[user_id],
-            id="delete_skins: "+ str(user_id),
-            max_instances=1,
-            next_run_time=datetime.now() + timedelta(seconds=1800)
-        )
     print("APScheduler запущен и готов к работе.")
 
 @app.on_event("shutdown")
