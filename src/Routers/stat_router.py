@@ -32,55 +32,59 @@ async def get_stat_api(user_id):
 
     market = CSMarket(user["api_key"])
 
-    days_to_fetch = 30
-    fetch_start_ts = _get_start_of_day_timestamp(days_to_fetch)
+    # === timestamps ===
+    now = datetime.now(timezone.utc)
 
-    sales_history_response = await market.get_sales_history(fetch_start_ts)
+    today_start_ts = _get_start_of_day_timestamp(0)
+    yesterday_start_ts = _get_start_of_day_timestamp(1)
+
+    last_7_days_ts = int((now - timedelta(days=7)).timestamp())
+    last_30_days_ts = int((now - timedelta(days=30)).timestamp())
+
+    # Загружаем только 30 дней (дольше нет смысла)
+    sales_history_response = await market.get_sales_history(last_30_days_ts)
 
     if not sales_history_response["success"]:
         return {"error": "Failed to fetch sales history"}
 
     all_sales = sales_history_response.get("data", [])
 
-    today_start_ts = _get_start_of_day_timestamp(0)
-    yesterday_start_ts = _get_start_of_day_timestamp(1)
-
-    now = datetime.now(timezone.utc)
-    week_start_date = now.date() - timedelta(days=now.weekday())
-    week_start_ts = int(datetime.combine(week_start_date, datetime.min.time(), tzinfo=timezone.utc).timestamp())
-
+    # === категории ===
     sales_today = []
     sales_yesterday = []
-    sales_week = []
+    sales_7d = []
+    sales_30d = []
 
     for item in all_sales:
-        item_time_str = item.get("time")
-        if item_time_str is None:
+        ts_str = item.get("time")
+        if ts_str is None:
             continue
 
         try:
-            item_time = int(item_time_str)
+            ts = int(ts_str)
         except ValueError:
-            logger.warning(f"Не удалось конвертировать время в число: {item_time_str}")
+            logger.warning(f"Invalid timestamp: {ts_str}")
             continue
 
-        if item_time >= today_start_ts:
+        # Today
+        if ts >= today_start_ts:
             sales_today.append(item)
 
-        if item_time >= yesterday_start_ts and item_time < today_start_ts:
+        # Yesterday
+        if yesterday_start_ts <= ts < today_start_ts:
             sales_yesterday.append(item)
 
-        if item_time >= week_start_ts:
-            sales_week.append(item)
+        # Last 7 days
+        if ts >= last_7_days_ts:
+            sales_7d.append(item)
 
-    data_out_today = check_money({"success": True, "data": sales_today})
-    data_out_yesterday = check_money({"success": True, "data": sales_yesterday})
-    data_out_week = check_money({"success": True, "data": sales_week})
-    data_out_month = check_money(sales_history_response)
+        # Last 30 days
+        if ts >= last_30_days_ts:
+            sales_30d.append(item)
 
     return {
-        "today": data_out_today,
-        "yesterday": data_out_yesterday,
-        "week": data_out_week,
-        "month": data_out_month,
+        "today": check_money({"success": True, "data": sales_today}),
+        "yesterday": check_money({"success": True, "data": sales_yesterday}),
+        "week": check_money({"success": True, "data": sales_7d}),
+        "month": check_money({"success": True, "data": sales_30d}),
     }

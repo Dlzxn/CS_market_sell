@@ -179,7 +179,7 @@ async def check_user_orders(user_id: int | str) -> None:
             skin_hash = item["market_hash_name"]
             if int(item["position"]) == 1:
                 logger.info(f"Позиция предмета {skin_hash} занимает 1 место")
-                continue
+
 
             flag = False
             try:
