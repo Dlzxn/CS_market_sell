@@ -41,19 +41,18 @@ async def get_stat_api(user_id):
     last_7_days_ts = int((now - timedelta(days=7)).timestamp())
     last_30_days_ts = int((now - timedelta(days=30)).timestamp())
 
-    # Загружаем только 30 дней (дольше нет смысла)
-    sales_history_response = await market.get_sales_history(last_30_days_ts)
-
-    if not sales_history_response["success"]:
+    sales_history_response = await market.get_sales_history(last_30_days_ts, now.timestamp())
+    try:
+        if not sales_history_response["success"]:
+            return {"error": "Failed to fetch sales history"}
+    except Exception as e:
         return {"error": "Failed to fetch sales history"}
 
     all_sales = sales_history_response.get("data", [])
 
-    # === категории ===
     sales_today = []
     sales_yesterday = []
     sales_7d = []
-    sales_30d = []
 
     for item in all_sales:
         ts_str = item.get("time")
@@ -78,13 +77,9 @@ async def get_stat_api(user_id):
         if ts >= last_7_days_ts:
             sales_7d.append(item)
 
-        # Last 30 days
-        if ts >= last_30_days_ts:
-            sales_30d.append(item)
-
     return {
         "today": check_money({"success": True, "data": sales_today}),
         "yesterday": check_money({"success": True, "data": sales_yesterday}),
         "week": check_money({"success": True, "data": sales_7d}),
-        "month": check_money({"success": True, "data": sales_30d}),
+        "month": check_money({"success": True, "data": all_sales}),
     }
